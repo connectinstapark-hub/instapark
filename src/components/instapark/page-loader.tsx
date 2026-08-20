@@ -14,7 +14,10 @@ export function PageLoader() {
     body.style.overflow = "hidden";
     window.scrollTo(0, 0);
 
-    const fadeTimer = setTimeout(() => setFading(true), 5000);
+    const fadeTimer = setTimeout(() => {
+      setFading(true);
+      body.style.overflow = prevOverflow;
+    }, 5000);
     return () => {
       clearTimeout(fadeTimer);
       body.style.overflow = prevOverflow;
