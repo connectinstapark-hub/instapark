@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import wordmark from "@/assets/instapark-wordmark.png.asset.json";
+import mark from "@/assets/instapark-mark.png.asset.json";
 
 export function PageLoader() {
   const [visible, setVisible] = useState(true);
@@ -32,11 +33,18 @@ export function PageLoader() {
           <div className="absolute inset-0 rounded-full bg-cream shadow-2xl shadow-black/30" />
           <div className="absolute inset-0 rounded-full border-2 border-gold/30" />
           <div className="absolute inset-[-6px] rounded-full border-2 border-t-gold border-r-transparent border-b-transparent border-l-transparent animate-spin" />
-          <div className="relative flex h-[76%] w-[76%] items-center justify-center rounded-full p-4">
+          <div className="relative flex h-[78%] w-[78%] flex-col items-center justify-center gap-2 rounded-full px-4">
+            <img
+              src={mark.url}
+              alt="InstaPark logo: a folded-ribbon P with an integrated car silhouette"
+              className="h-[42%] w-auto max-w-full object-contain"
+              loading="eager"
+              decoding="sync"
+            />
             <img
               src={wordmark.url}
               alt="InstaPark Digital Valet & Event Parking — a product of Pinsoftek"
-              className="h-full w-auto max-w-full object-contain"
+              className="h-[38%] w-auto max-w-full object-contain"
               loading="eager"
               decoding="sync"
             />
