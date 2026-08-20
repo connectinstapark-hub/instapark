@@ -170,7 +170,12 @@
 
   html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
   }
+}
+
+@utility loader-lock {
+  overflow: hidden;
 }
 
 @utility ribbon-clip {
