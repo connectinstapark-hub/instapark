@@ -11,20 +11,20 @@ export function Logo({
   showWordmark?: boolean;
 }) {
   return (
-    <span className={cn("flex items-center gap-2", className)}>
+    <span className={cn("flex items-center gap-2.5", className)}>
       <img
         src={logo.url}
         alt="InstaPark logo: a folded-ribbon P with an integrated car silhouette"
-        className="h-9 w-auto shrink-0 object-contain"
-        width={38}
-        height={36}
+        className="h-12 w-auto shrink-0 object-contain"
+        width={50}
+        height={48}
         loading="eager"
         decoding="async"
       />
       {showWordmark ? (
         <span
           className={cn(
-            "font-display text-xl font-bold leading-none tracking-tight",
+            "font-display text-2xl font-bold leading-none tracking-tight",
             tone === "light" ? "text-brand-foreground" : "text-foreground",
           )}
         >
