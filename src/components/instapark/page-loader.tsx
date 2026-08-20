@@ -48,22 +48,22 @@ export function PageLoader() {
         )}
       >
         {/* Logo inside a rotating circle */}
-        <div className="relative flex h-72 w-72 items-center justify-center md:h-80 md:w-80">
+        <div className="relative flex h-96 w-96 items-center justify-center md:h-[28rem] md:w-[28rem]">
           <div className="absolute inset-0 rounded-full bg-cream shadow-2xl shadow-black/30" />
           <div className="absolute inset-0 rounded-full border-2 border-gold/30" />
           <div className="absolute inset-[-6px] rounded-full border-2 border-t-gold border-r-transparent border-b-transparent border-l-transparent animate-spin" />
-          <div className="relative flex h-[78%] w-[78%] flex-col items-center justify-center gap-2 rounded-full px-4">
+          <div className="relative flex h-[80%] w-[80%] flex-col items-center justify-center gap-3 rounded-full px-6">
             <img
               src={mark.url}
               alt="InstaPark logo: a folded-ribbon P with an integrated car silhouette"
-              className="h-[42%] w-auto max-w-full object-contain"
+              className="h-[46%] w-auto max-w-full object-contain"
               loading="eager"
               decoding="sync"
             />
             <img
               src={wordmark.url}
               alt="InstaPark Digital Valet & Event Parking — a product of Pinsoftek"
-              className="h-[38%] w-auto max-w-full object-contain"
+              className="h-[40%] w-auto max-w-full object-contain"
               loading="eager"
               decoding="sync"
             />
