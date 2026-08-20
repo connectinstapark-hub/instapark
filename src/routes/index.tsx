@@ -29,9 +29,12 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+import { PageLoader } from "@/components/instapark/page-loader";
+
 function Index() {
   return (
     <div className="min-h-screen bg-background">
+      <PageLoader />
       <SiteNav />
       <main>
         <Hero />
