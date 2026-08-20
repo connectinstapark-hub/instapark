@@ -28,7 +28,7 @@ Contact/demo form: name, company, email, venue type, message. Validated client-s
 
 ## Logo
 
-You'll upload the folded-ribbon "P" mark. Until then the navbar, hero and footer use a styled "InstaPark" wordmark placeholder in the brand type; swapping in the real asset is a one-line change once uploaded.
+The uploaded folded-ribbon "P" mark with the car silhouette becomes the brand anchor: used in the navbar, hero and footer alongside an "InstaPark" wordmark, and set as the site favicon. Its purple/gold gradient and fold geometry drive the decorative ribbon motifs used as section dividers.
 
 ## Technical notes
 
