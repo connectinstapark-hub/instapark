@@ -30,7 +30,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-import { PageLoader } from "@/components/instapark/page-loader";
 
 function Index() {
   return (
