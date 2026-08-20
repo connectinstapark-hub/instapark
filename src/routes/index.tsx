@@ -10,6 +10,7 @@ import { SocialProof } from "@/components/instapark/social-proof";
 import { Pricing } from "@/components/instapark/pricing";
 import { DemoCta } from "@/components/instapark/demo-cta";
 import { SiteFooter } from "@/components/instapark/site-footer";
+import { PageLoader } from "@/components/instapark/page-loader";
 
 const title = "InstaPark — Valet Management Platform for Hotels & Venues";
 const description =
