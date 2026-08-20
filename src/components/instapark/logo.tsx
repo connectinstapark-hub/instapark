@@ -1,4 +1,4 @@
-import logo from "@/assets/instapark-logo.png.asset.json";
+import logo from "@/assets/instapark-mark.png.asset.json";
 import { cn } from "@/lib/utils";
 
 export function Logo({
@@ -11,22 +11,24 @@ export function Logo({
   showWordmark?: boolean;
 }) {
   return (
-    <span className={cn("flex items-center gap-2.5", className)}>
+    <span className={cn("flex items-center gap-2", className)}>
       <img
         src={logo.url}
         alt="InstaPark logo: a folded-ribbon P with an integrated car silhouette"
-        className="h-9 w-9 object-contain"
-        width={36}
+        className="h-9 w-auto shrink-0 object-contain"
+        width={38}
         height={36}
+        loading="eager"
+        decoding="async"
       />
       {showWordmark ? (
         <span
           className={cn(
-            "font-display text-xl font-bold tracking-tight",
+            "font-display text-xl font-bold leading-none tracking-tight",
             tone === "light" ? "text-brand-foreground" : "text-foreground",
           )}
         >
-          Insta<span className="text-gold">Park</span>
+          insta<span className="text-gold">Park</span>
         </span>
       ) : null}
     </span>
