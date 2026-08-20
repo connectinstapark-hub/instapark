@@ -1,24 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteNav } from "@/components/instapark/site-nav";
+import { Hero } from "@/components/instapark/hero";
+import { ValueFraming } from "@/components/instapark/value-framing";
+import { Interfaces } from "@/components/instapark/interfaces";
+import { HowItWorks } from "@/components/instapark/how-it-works";
+import { Differentiators } from "@/components/instapark/differentiators";
+import { Audiences } from "@/components/instapark/audiences";
+import { SocialProof } from "@/components/instapark/social-proof";
+import { Pricing } from "@/components/instapark/pricing";
+import { DemoCta } from "@/components/instapark/demo-cta";
+import { SiteFooter } from "@/components/instapark/site-footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "InstaPark — Valet Management Platform for Hotels & Venues";
+const description =
+  "Real-time valet operations on one multi-tenant platform: digital intake, GPS spot tagging, live driver tracking, and app-free QR guest retrieval.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <SiteNav />
+      <main>
+        <Hero />
+        <ValueFraming />
+        <Interfaces />
+        <HowItWorks />
+        <Differentiators />
+        <Audiences />
+        <SocialProof />
+        <Pricing />
+        <DemoCta />
+      </main>
+      <SiteFooter />
     </div>
   );
 }
