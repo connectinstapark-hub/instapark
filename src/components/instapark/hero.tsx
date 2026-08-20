@@ -145,7 +145,7 @@ function HeroMockup() {
       </div>
 
       {/* guest QR pass */}
-      <div className="absolute -bottom-16 -left-3 w-52 rounded-xl border border-black/5 bg-background p-4 shadow-2xl shadow-black/40 sm:-left-10 lg:-bottom-20 lg:-left-14">
+      <div className="relative z-10 -mt-6 ml-auto w-52 rounded-xl border border-black/5 bg-background p-4 shadow-2xl shadow-black/40 lg:absolute lg:-bottom-20 lg:-left-14 lg:mt-0">
         <div className="flex items-center justify-between">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
             Guest pass
