@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import wordmark from "@/assets/instapark-wordmark.png.asset.json";
 import mark from "@/assets/instapark-mark.png.asset.json";
 
 export function PageLoader() {
