@@ -59,7 +59,7 @@ export function DemoCta() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
+          access_key: import.meta.env["VITE_WEB3FORMS_ACCESS_KEY"] || "YOUR_ACCESS_KEY_HERE",
           subject: `New Demo Request from ${values.name} (${values.company})`,
           name: values.name,
           email: values.email,
