@@ -36,7 +36,9 @@ export function DemoCta() {
     setErrors((e) => ({ ...e, [key]: undefined }));
   };
 
-  const submit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     const next: Partial<Record<keyof Fields, string>> = {};
     if (!values.name.trim()) next.name = "Please enter your name.";
@@ -46,8 +48,39 @@ export function DemoCta() {
     if (!values.venueType) next.venueType = "Please select a venue type.";
     setErrors(next);
     if (Object.keys(next).length > 0) return;
-    setSent(true);
-    setValues(empty);
+
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
+          subject: `New Demo Request from ${values.name} (${values.company})`,
+          name: values.name,
+          email: values.email,
+          company: values.company,
+          venueType: values.venueType,
+          message: values.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setValues(empty);
+      } else {
+        alert("Something went wrong while sending the email. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please check your internet connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -140,11 +173,11 @@ export function DemoCta() {
                 <select
                   value={values.venueType}
                   onChange={(e) => set("venueType")(e.target.value)}
-                  className={inputClass}
+                  className={`${inputClass} appearance-none bg-[url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m6%209%206%206%206-6'/%3E%3C/svg%3E")] bg-no-repeat bg-[position:calc(100%-1rem)_center] pr-10`}
                 >
-                  <option value="">Select a venue type</option>
+                  <option value="" className="bg-[#2d1b4e] text-white p-3">Select a venue type</option>
                   {venueTypes.map((t) => (
-                    <option key={t} value={t} className="text-foreground">
+                    <option key={t} value={t} className="bg-[#2d1b4e] text-white p-3 my-1 hover:bg-gold hover:text-gold-foreground rounded-sm">
                       {t}
                     </option>
                   ))}
@@ -161,9 +194,10 @@ export function DemoCta() {
               </Field>
               <button
                 type="submit"
-                className="gold-gradient corner-cut w-full px-6 py-3.5 text-sm font-semibold text-gold-foreground transition-transform hover:-translate-y-0.5"
+                disabled={isSubmitting}
+                className="gold-gradient corner-cut w-full px-6 py-3.5 text-sm font-semibold text-gold-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-70 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
               >
-                Request my demo
+                {isSubmitting ? "Sending Request..." : "Request my demo"}
               </button>
               <p className="text-[11px] leading-relaxed text-brand-foreground/50">
                 We'll only use these details to contact you about InstaPark.
@@ -192,10 +226,13 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-2 flex items-center justify-between text-xs font-semibold uppercase tracking-wide text-brand-foreground/70">
-        {label}
+      <span className="mb-2 flex items-center justify-between text-xs font-semibold uppercase tracking-wide text-white">
+        <span>
+          {label}
+          {!optional && <span className="ml-1 text-red-500">*</span>}
+        </span>
         {optional ? (
-          <span className="font-normal normal-case text-brand-foreground/40">
+          <span className="font-normal normal-case text-white/60">
             Optional
           </span>
         ) : null}

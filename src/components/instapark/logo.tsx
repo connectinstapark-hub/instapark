@@ -13,7 +13,7 @@ export function Logo({
   return (
     <span className={cn("flex items-center gap-2.5", className)}>
       <img
-        src={logo.url}
+        src="/favicon.png"
         alt="InstaPark logo: a folded-ribbon P with an integrated car silhouette"
         className="h-12 w-auto shrink-0 object-contain"
         width={50}
