@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import markAsset from "@/assets/instapark-mark.png.asset.json";
 
 export function PageLoader() {
   const [visible, setVisible] = useState(true);
