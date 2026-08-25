@@ -1,4 +1,3 @@
-import logo from "@/assets/instapark-mark.png.asset.json";
 import { cn } from "@/lib/utils";
 
 export function Logo({

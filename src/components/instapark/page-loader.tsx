@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import mark from "@/assets/instapark-mark.png.asset.json";
 
 export function PageLoader() {
   const [visible, setVisible] = useState(true);
@@ -53,7 +52,7 @@ export function PageLoader() {
           <div className="absolute inset-[-6px] rounded-full border-2 border-t-gold border-r-transparent border-b-transparent border-l-transparent animate-spin" />
           <div className="relative flex h-[80%] w-[80%] flex-col items-center justify-center gap-3 rounded-full px-6 text-center">
             <img
-              src={mark.url}
+              src="/favicon.png"
               width={512}
               height={512}
               alt="InstaPark logo: a folded-ribbon P with an integrated car silhouette"
