@@ -7,7 +7,7 @@ import {
   Star,
   Users,
 } from "lucide-react";
-import guestPassAsset from "@/assets/guest-pass-qr.png.asset.json";
+
 import { Logo } from "./logo";
 import { Reveal } from "./reveal";
 
