@@ -42,18 +42,23 @@ export function HowItWorks() {
         />
 
         <ol className="relative mt-16 grid gap-8 lg:grid-cols-5 lg:gap-5">
-          <div
-            aria-hidden
-            className="absolute left-[1.35rem] top-4 hidden h-[calc(100%-2rem)] w-px bg-gradient-to-b from-gold/60 via-gold/25 to-transparent lg:left-0 lg:top-6 lg:h-px lg:w-full lg:bg-gradient-to-r"
-          />
           {phases.map((phase, i) => (
             <Reveal
               as="li"
               key={phase.title}
               delay={i * 90}
-              className="relative pl-14 lg:pl-0"
+              className="relative pl-16 lg:pl-0"
             >
-              <span className="gold-gradient absolute left-0 top-0 inline-flex size-11 items-center justify-center rounded-lg font-display text-base font-bold text-gold-foreground shadow-lg shadow-black/25 lg:static lg:mb-5">
+              {/* connector line to the next phase */}
+              {i < phases.length - 1 && (
+                <span
+                  aria-hidden
+                  className="absolute left-[1.375rem] top-12 h-[calc(100%+2rem-3rem)] w-[2px] bg-gradient-to-b from-gold/70 to-gold/15 lg:left-12 lg:top-[1.375rem] lg:h-[2px] lg:w-[calc(100%+1.25rem-3rem)] lg:bg-gradient-to-r"
+                >
+                  <span className="absolute -bottom-0.5 left-1/2 size-1.5 -translate-x-1/2 rotate-45 bg-gold/60 lg:bottom-auto lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-x-0 lg:-translate-y-1/2" />
+                </span>
+              )}
+              <span className="gold-gradient absolute left-0 top-0 z-10 inline-flex size-11 items-center justify-center rounded-lg font-display text-base font-bold text-gold-foreground shadow-lg shadow-black/25 lg:relative lg:left-auto lg:top-auto lg:mb-5">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-lg font-bold text-brand-foreground">
@@ -65,6 +70,7 @@ export function HowItWorks() {
             </Reveal>
           ))}
         </ol>
+
       </div>
     </section>
   );
