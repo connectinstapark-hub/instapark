@@ -7,7 +7,7 @@ import {
   Star,
   Users,
 } from "lucide-react";
-import guestPassAsset from "@/assets/guest-pass-qr.png.asset.json";
+
 import { Logo } from "./logo";
 import { Reveal } from "./reveal";
 
@@ -213,7 +213,7 @@ function HeroMockup() {
       {/* guest QR pass — floating phone card */}
       <div className="relative z-10 -mt-4 ml-auto w-24 overflow-hidden rounded-[1.1rem] border-2 border-gold/40 bg-brand-deep shadow-2xl shadow-black/50 sm:w-28 lg:absolute lg:-bottom-12 lg:-left-10 lg:mt-0 lg:w-28 lg:rotate-[-4deg] lg:transition-all lg:duration-500 lg:hover:-translate-y-2 lg:hover:rotate-[-1deg]">
         <img
-          src={guestPassAsset.url}
+          src="/guest-pass-qr.png"
           alt="InstaPark digital guest pass showing a scannable QR code, agency branding and contact number"
           className="block h-auto w-full"
           width={512}
