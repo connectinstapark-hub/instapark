@@ -145,8 +145,8 @@ function HeroMockup() {
         </div>
       </div>
 
-      {/* guest QR pass */}
-      <div className="relative z-10 -mt-6 ml-auto w-56 overflow-hidden rounded-2xl border-2 border-gold/30 shadow-2xl shadow-black/40 lg:absolute lg:-bottom-24 lg:-left-14 lg:mt-0 lg:w-64">
+      {/* guest QR pass — floating phone card */}
+      <div className="relative z-10 -mt-6 ml-auto w-36 overflow-hidden rounded-[1.25rem] border-2 border-gold/40 bg-brand-deep shadow-2xl shadow-black/50 sm:w-40 lg:absolute lg:-bottom-14 lg:-left-14 lg:mt-0 lg:w-44 lg:rotate-[-3deg] lg:transition-transform lg:hover:rotate-[-1deg]">
         <img
           src={guestPassAsset.url}
           alt="InstaPark digital guest pass showing a scannable QR code, agency branding and contact number"
