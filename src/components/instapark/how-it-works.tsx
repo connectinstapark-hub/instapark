@@ -29,6 +29,35 @@ export function HowItWorks() {
       id="how-it-works"
       className="purple-gradient ribbon-clip-up relative scroll-mt-24 overflow-hidden py-24 lg:py-32"
     >
+      <style>{`
+        @keyframes connector-flow {
+          0% { background-position: 0% 200%; }
+          100% { background-position: 0% -200%; }
+        }
+        @keyframes connector-flow-desktop {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+        @keyframes diamond-glow {
+          0%, 100% { transform: rotate(45deg) scale(1); filter: drop-shadow(0 0 0px rgba(252, 191, 0, 0)); }
+          50% { transform: rotate(45deg) scale(1.25); filter: drop-shadow(0 0 8px rgba(252, 191, 0, 0.6)); }
+        }
+        .connector-line {
+          background: linear-gradient(180deg, rgba(252, 191, 0, 0) 0%, rgba(252, 191, 0, 0.9) 50%, rgba(252, 191, 0, 0) 100%);
+          background-size: 100% 200%;
+          animation: connector-flow 4s linear infinite;
+        }
+        @media (min-width: 1024px) {
+          .connector-line {
+            background: linear-gradient(90deg, rgba(252, 191, 0, 0) 0%, rgba(252, 191, 0, 0.9) 50%, rgba(252, 191, 0, 0) 100%);
+            background-size: 200% 100%;
+            animation: connector-flow-desktop 4s linear infinite;
+          }
+        }
+        .diamond-pulse {
+          animation: diamond-glow 3s ease-in-out infinite;
+        }
+      `}</style>
       <div
         aria-hidden
         className="pointer-events-none absolute -right-16 bottom-10 h-72 w-72 rotate-[18deg] bg-gold/8 [clip-path:polygon(25%_0,100%_25%,75%_100%,0_70%)]"
@@ -53,9 +82,12 @@ export function HowItWorks() {
               {i < phases.length - 1 && (
                 <span
                   aria-hidden
-                  className="absolute left-[1.375rem] top-12 h-[calc(100%+2rem-3rem)] w-[2px] bg-gradient-to-b from-gold/70 to-gold/15 lg:left-12 lg:top-[1.375rem] lg:h-[2px] lg:w-[calc(100%+1.25rem-3rem)] lg:bg-gradient-to-r"
+                  className="connector-line absolute left-[1.375rem] top-12 h-[calc(100%+2rem-3rem)] w-[2px] lg:left-12 lg:top-[1.375rem] lg:h-[2px] lg:w-[calc(100%+1.25rem-3rem)]"
                 >
-                  <span className="absolute -bottom-0.5 left-1/2 size-1.5 -translate-x-1/2 rotate-45 bg-gold/60 lg:bottom-auto lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-x-0 lg:-translate-y-1/2" />
+                  <span
+                    className="diamond-pulse absolute -bottom-0.5 left-1/2 size-1.5 -translate-x-1/2 rotate-45 bg-gold lg:bottom-auto lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-x-0 lg:-translate-y-1/2"
+                    style={{ animationDelay: `${i * 0.6}s` }}
+                  />
                 </span>
               )}
               <span className="gold-gradient absolute left-0 top-0 z-10 inline-flex size-11 items-center justify-center rounded-lg font-display text-base font-bold text-gold-foreground shadow-lg shadow-black/25 lg:relative lg:left-auto lg:top-auto lg:mb-5">
