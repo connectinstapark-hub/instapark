@@ -1,4 +1,5 @@
-import { ArrowRight, Car, MapPin, QrCode, Radio, ShieldCheck } from "lucide-react";
+import { ArrowRight, Car, MapPin, Radio } from "lucide-react";
+import guestPassAsset from "@/assets/guest-pass-qr.png.asset.json";
 import { Logo } from "./logo";
 import { Reveal } from "./reveal";
 
@@ -145,22 +146,16 @@ function HeroMockup() {
       </div>
 
       {/* guest QR pass */}
-      <div className="relative z-10 -mt-6 ml-auto w-52 rounded-xl border border-black/5 bg-background p-4 shadow-2xl shadow-black/40 lg:absolute lg:-bottom-20 lg:-left-14 lg:mt-0">
-        <div className="flex items-center justify-between">
-          <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-            Guest pass
-          </p>
-          <QrCode className="size-4 text-primary" />
-        </div>
-        <p className="mt-2 font-display text-lg font-bold text-foreground">
-          #IP-4821
-        </p>
-        <p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2 py-1 text-[11px] font-semibold text-primary">
-          <ShieldCheck className="size-3" /> Driver en route
-        </p>
-        <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-muted">
-          <div className="gold-gradient h-full w-3/4 rounded-full" />
-        </div>
+      <div className="relative z-10 -mt-6 ml-auto w-56 overflow-hidden rounded-2xl border-2 border-gold/30 shadow-2xl shadow-black/40 lg:absolute lg:-bottom-24 lg:-left-14 lg:mt-0 lg:w-64">
+        <img
+          src={guestPassAsset.url}
+          alt="InstaPark digital guest pass showing a scannable QR code, agency branding and contact number"
+          className="block h-auto w-full"
+          width={512}
+          height={912}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
   );
