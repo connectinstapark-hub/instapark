@@ -58,7 +58,7 @@ export function HowItWorks() {
                   <span className="absolute -bottom-0.5 left-1/2 size-1.5 -translate-x-1/2 rotate-45 bg-gold/60 lg:bottom-auto lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-x-0 lg:-translate-y-1/2" />
                 </span>
               )}
-              <span className="gold-gradient absolute left-0 top-0 z-10 inline-flex size-11 items-center justify-center rounded-lg font-display text-base font-bold text-gold-foreground shadow-lg shadow-black/25 lg:relative lg:mb-5">
+              <span className="gold-gradient absolute left-0 top-0 z-10 inline-flex size-11 items-center justify-center rounded-lg font-display text-base font-bold text-gold-foreground shadow-lg shadow-black/25 lg:relative lg:left-auto lg:top-auto lg:mb-5">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-lg font-bold text-brand-foreground">
