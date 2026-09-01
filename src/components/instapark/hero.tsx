@@ -1,4 +1,12 @@
-import { ArrowRight, Car, MapPin, Radio } from "lucide-react";
+import {
+  AlertTriangle,
+  ArrowRight,
+  Car,
+  MapPin,
+  Radio,
+  Star,
+  Users,
+} from "lucide-react";
 import guestPassAsset from "@/assets/guest-pass-qr.png.asset.json";
 import { Logo } from "./logo";
 import { Reveal } from "./reveal";
