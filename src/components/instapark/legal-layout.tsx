@@ -48,8 +48,14 @@ export function H2({ children }: { children: ReactNode }) {
   );
 }
 
-export function P({ children }: { children: ReactNode }) {
-  return <p className="mb-4 text-[15px] text-foreground/80">{children}</p>;
+export function P({
+  children,
+  className = "mb-4 text-[15px] text-foreground/80",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <p className={className}>{children}</p>;
 }
 
 export function Ul({ items }: { items: ReactNode[] }) {
