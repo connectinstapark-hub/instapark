@@ -23,10 +23,10 @@ const groups = [
   {
     title: "Legal",
     links: [
-      { label: "Privacy", href: "#contact" },
-      { label: "Terms", href: "#contact" },
+      { label: "Privacy", href: "/privacy-policy" },
+      { label: "Terms", href: "/terms-and-conditions" },
+      { label: "Disclaimer", href: "/disclaimer" },
       { label: "Security", href: "#contact" },
-      { label: "Data processing", href: "#contact" },
     ],
   },
   {
