@@ -3,7 +3,7 @@ import { H2, LegalPage, P, Ul } from "@/components/instapark/legal-layout";
 
 const title = "Privacy Policy — InstaPark";
 const description =
-  "How InstaPark collects, uses, and protects information gathered through its website, mobile application, and in-person services.";
+  "How InstaPark gathers, uses, and shares information through its website, mobile application, and in-person services.";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
@@ -24,188 +24,166 @@ function PrivacyPolicy() {
   return (
     <LegalPage title="Privacy Policy" updated="September 2026">
       <P>
-        This Privacy Policy is designed to tell users about the practices
-        regarding collection, use, and disclosure of information that may be
-        collected by InstaPark through its website or mobile application, or in
-        person. Please read this entire Privacy Policy and the Terms &
-        Conditions, available on our sites, before using or submitting any
-        information through the InstaPark app, website, or any other mode.
+        This Privacy Policy explains how InstaPark gathers, uses, and shares information through
+        its website, its mobile application, or in person. Please go through this Policy in full,
+        together with the Terms & Conditions posted on our sites, before you use the InstaPark app
+        or website or hand over any information through either channel.
       </P>
       <P>
-        We are committed to ensuring that your privacy is protected. We may
-        change this policy from time to time by updating this page. Users will
-        be notified of such changes through our website and/or by e-mail. In the
-        event of any disagreement, the user is free to suspend or terminate the
-        service by deleting their account.
+        Protecting your privacy matters to us. This Policy may be revised periodically, and any
+        update will be posted here. When changes happen, we'll let users know through our website
+        and/or by email. If you don't agree with a change, you're free to stop using the service
+        and delete your account at any time.
       </P>
 
-      <H2>What We Do With the Information We Gather</H2>
+      <H2>How We Use the Information We Collect</H2>
       <P>
-        We require this information to understand your needs and provide you
-        with a better service, and in particular for the following reasons: to
-        operate and improve InstaPark's valet and event-parking services, to
-        verify driver and staff identity, to coordinate parking/retrieval
-        requests between drivers, supervisors, admins, and hosts, and to
-        communicate service updates. We may send you service-related emails,
-        SMS, or push notifications. We may contact you by e-mail or phone.
+        We ask for this information so we can understand what you need and deliver a better
+        experience — specifically, to run and improve InstaPark's valet and event-parking
+        operations, confirm the identity of drivers and staff, coordinate parking and retrieval
+        requests among drivers, supervisors, admins, and hosts, and keep you informed about the
+        service. This may include service-related emails, text messages, or push notifications, as
+        well as direct contact by phone or email.
       </P>
 
-      <H2>Information You Provide to Us</H2>
+      <H2>Information You Give Us</H2>
       <P>
-        We collect certain information from our users for the purpose of user
-        identification. The following information is collected when a user uses
-        our website or mobile application:
+        We collect some details from users purely to identify them. When you use our website or
+        app, the following gets recorded:
       </P>
       <Ul
-        items={["Name", "Contact number", "E-mail address",
+        items={["Name", "Phone number", "Email address",
           "Role (Owner/Provider, Admin, Supervisor, Driver, Host, or Guest)"]}
       />
       <P>
-        By providing the above information, the user voluntarily agrees to the
-        terms and conditions of this document.
+        Submitting this information counts as your voluntary agreement to the terms set out in
+        this document.
       </P>
-
-      <H2>
-        The following additional information is collected from drivers,
-        supervisors, and admin staff for identity verification and payout
-        purposes
-      </H2>
+      <P>
+        Drivers, supervisors, and admin staff are asked for the following, in addition, so we can
+        confirm their identity:
+      </P>
       <Ul
         items={[
-          "Government ID documents: PAN and Aadhar (or equivalent government-issued ID), and driving license, collected to verify identity and eligibility to operate as a driver on the platform.",
-          "Bank account details: collected where payouts to drivers or staff are processed through the platform.",
-          "License and vehicle photos: captured via the app's camera feature for verification purposes.",
+          "Official identity documents — PAN and Aadhaar (or an equivalent government-issued ID) and a driving licence — used to confirm identity and eligibility to work as a driver on the platform.",
+          "Bank account information — collected only where payouts to drivers or staff run through the platform.",
+          "Photos of the licence and vehicle — captured through the app's camera for verification.",
         ]}
       />
 
-      <H2>The following information is collected during active use of the service</H2>
+      <H2>The following gets collected while the service is in active use</H2>
       <Ul
         items={[
-          "Location: InstaPark uses GPS to track the location of drivers during active park/retrieval runs, in order to coordinate handoffs between drivers, supervisors, and hosts, and to maintain a record of vehicle movement for safety and accountability. This information is not shared publicly. It may be shared with the relevant hotel, event host, or valet provider operating the event, and with law enforcement or insurers in the event of an accident, damage, or theft claim.",
-          "QR / pre-registration data: guest and vehicle details submitted at pre-registration, used to identify vehicles and match them to the correct event, host, and driver.",
+          "Location — InstaPark relies on GPS to follow a driver's position during live park/retrieval jobs, so that handoffs between drivers, supervisors, and hosts can be coordinated and a record of vehicle movement kept for safety and accountability. Location is also tracked in the background — that is, while the app isn't actively open — but only for the window between an event's start time and its close: tracking begins once the event becomes active (not at the point the driver is assigned to it) and continues, with that event kept selected, until the event is closed. This is never made public. It may, however, be passed to the hotel, event host, or valet provider running the event, and to law enforcement or insurers if an accident, damage, or theft claim arises.",
+          "QR / pre-registration details — vehicle and guest information submitted ahead of time, used to match vehicles to the right event, host, and driver.",
         ]}
       />
 
       <H2>Other Information</H2>
       <P>
-        We collect non-personal information which has no direct relation to any
-        specific individual, including but not limited to IP address and usage
-        details. We have the right to collect, use, transfer, and disclose
-        non-personal information for any purpose. Where personal and
-        non-personal information is combined, both will be treated as personal
+        We also gather non-personal information that isn't tied to any one individual — for
+        instance, IP addresses and general usage patterns. We're entitled to collect, use,
+        transfer, and disclose this non-personal information for any purpose. If personal and
+        non-personal information ever get combined, the combined set is treated as personal
         information.
       </P>
 
       <H2>Log & Usage Data</H2>
       <P>
-        Log and usage data is service-related, diagnostic, usage, and
-        performance information our servers automatically collect when you
-        access or use InstaPark, recorded in log files. This may include
-        date/time stamps of your activity, pages and screens viewed, actions
-        taken, device event information, and error reports ("crash dumps").
+        Log and usage data covers the diagnostic, performance, and usage information our servers
+        pick up automatically whenever you use InstaPark, stored in log files. It can include
+        timestamps of activity, which screens or pages were viewed, actions taken, device event
+        details, and error or crash reports.
       </P>
 
       <H2>Security</H2>
       <P>
-        We are committed to ensuring that your information is protected. We have
-        put procedures in place to safeguard and secure the information we
-        collect, including encryption in transit. However, no method of
-        transmission over the internet or electronic storage is 100% secure, and
-        we cannot guarantee absolute security.
+        Keeping your information safe is something we take seriously. We've put safeguards in
+        place — including encryption while data is in transit — but no method of sending data over
+        the internet or storing it electronically is completely risk-free, so we can't promise
+        absolute security.
       </P>
 
       <H2>Bank Account & Financial Details</H2>
       <P>
-        InstaPark does not currently process payments or payouts through the
-        application, and no payment gateway is integrated. Where bank account
-        details are collected from drivers (e.g., for identity/verification
-        purposes), you agree, understand, and confirm that such details are
-        correct, accurate, and lawfully your own. This information is not shared
-        with any third party except where required by law, regulation, or court
-        order. Should InstaPark introduce in-app payments or payouts in the
-        future, this Privacy Policy will be updated to name the relevant payment
-        processor and describe how that data is handled.
+        InstaPark doesn't currently handle payments or payouts inside the app, and there's no
+        payment gateway integrated. Where drivers' bank details are collected (say, for identity
+        checks), you're confirming that those details are correct, accurate, and genuinely your
+        own. We won't pass this information to any third party except where the law, a regulation,
+        or a court requires it. If InstaPark adds in-app payments or payouts down the line, this
+        Policy will be updated to identify the payment processor involved and explain how that
+        data is handled.
       </P>
 
       <H2>Cookies</H2>
       <P>
-        Cookies are small files commonly used as anonymous unique identifiers,
-        sent to your browser from websites you visit and stored on your device.
-        InstaPark's web platform may use cookies and similar tracking technology
-        to analyze usage, measure effectiveness, and support trust and safety.
-        You can modify your browser/device settings to block cookies, though
-        this may affect functionality.
+        Cookies are small files — effectively anonymous identifiers — that a website sends to your
+        browser and that get stored on your device. InstaPark's web platform may use cookies and
+        comparable tracking tools to study usage patterns, gauge effectiveness, and support trust
+        and safety efforts. You can adjust your browser or device settings to block them, though
+        doing so may limit some functionality.
       </P>
 
       <H2>Data Safety</H2>
       <P>
-        Before installing this app, you can check the app's data safety section
-        (Google Play) or App Privacy details (Apple App Store) to see how
-        InstaPark handles your data.
+        Before you install the app, you can review its data safety section on Google Play, or its
+        App Privacy details on the Apple App Store, to see how InstaPark handles data.
       </P>
 
       <H2>Data Retention</H2>
       <P>
-        We retain personal information for as long as your account remains
-        active, and for 90 days after account deletion, or longer where required
-        to comply with legal, tax, or regulatory obligations. Data such as PAN,
-        Aadhar, and bank details is retained only for as long as necessary to
-        comply with applicable law or to resolve disputes, after which it is
-        securely deleted.
+        We hold on to personal information for as long as your account stays active, plus 90 days
+        after it's deleted, or longer if legal, tax, or regulatory obligations require it. Items
+        such as PAN, Aadhaar, and bank details are kept only as long as needed to meet legal
+        requirements or settle disputes, and are then securely erased.
       </P>
 
       <H2>Account & Data Deletion</H2>
       <P>
-        You may request deletion of your account and associated personal data at
-        any time by contacting us at [SUPPORT EMAIL] or submitting a deletion
-        request from within the app. Deletion requests are reviewed by our team;
-        once approved, your account and associated data are permanently deleted
-        from our systems within 7 business days, except where retention is
-        required by law (see Data Retention above). This process is available
-        whether or not you currently have an active account.
+        You can ask to have your account and the personal data tied to it deleted at any time —
+        email us at [SUPPORT EMAIL]. Our team reviews each request; once it's approved, your
+        account and its data are permanently removed from our systems within 7 business days,
+        except where the law requires us to retain something (see Data Retention above). You can
+        use this process whether or not your account is currently active.
       </P>
 
       <H2>Competency to Contract</H2>
       <P>
-        This Privacy Policy is not applicable to users who are minors or
-        otherwise incompetent to contract. We do not knowingly collect
-        personally identifiable information from such users.
+        This Privacy Policy doesn't apply to minors or to anyone otherwise unable to enter into a
+        contract, and we don't knowingly gather personally identifiable information from such
+        users.
       </P>
 
       <H2>Changes to This Privacy Policy</H2>
       <P>
-        InstaPark reserves the right to amend this policy from time to time.
-        Changes are effective immediately upon posting of the revised Privacy
-        Policy. We encourage you to periodically review this page.
+        InstaPark may update this Policy from time to time, and any revision takes effect as soon
+        as it's posted. We suggest checking back on this page periodically.
       </P>
 
       <H2>Grievance Redressal</H2>
       <P>
-        If you have any questions regarding this Privacy Policy or our data
-        practices, or wish to raise a grievance, you may reach out to us at
-        [GRIEVANCE EMAIL].
+        Questions about this Privacy Policy or how we handle data, or a grievance you'd like to
+        raise, can be sent to [GRIEVANCE EMAIL].
       </P>
 
       <H2>Information Collected Automatically</H2>
       <P className="mb-4 text-[15px] font-semibold text-foreground">
-        In short: Some information, such as your IP address and device
-        characteristics, is collected automatically when you install and use
-        InstaPark.
+        In short: certain details, such as your IP address and device characteristics, are picked
+        up automatically once you install and use InstaPark.
       </P>
       <Ul
         items={[
-          "Registration and usage data: log data including IP address, device information, and activity within the app.",
-          "Device data: device type, hardware model, operating system, and carrier/network information.",
-          "Location data: as described above, used to coordinate park/retrieval runs. You may disable location access in your device settings, though this may limit certain features (e.g., live tracking).",
+          "Registration and usage data — log information such as IP address, device details, and in-app activity.",
+          "Device data — device type, hardware model, operating system, and network/carrier information.",
+          "Location data — as described above, used to coordinate park/retrieval jobs. You can turn off location access in your device settings, though some features (like live tracking) may then be limited.",
         ]}
       />
 
       <H2>How We Keep Your Information Secure</H2>
       <P className="mb-4 text-[15px] font-semibold text-foreground">
-        In short: We use technical and organizational security measures designed
-        to protect your personal information. Despite these efforts, no method
-        of transmission or storage can be guaranteed 100% secure, and use of
-        InstaPark is at your own risk.
+        In short: we apply technical and organizational safeguards to protect your personal
+        information. Even so, no transmission or storage method can be guaranteed fully secure,
+        and using InstaPark is at your own risk.
       </P>
     </LegalPage>
   );

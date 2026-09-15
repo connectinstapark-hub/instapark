@@ -23,153 +23,143 @@ export const Route = createFileRoute("/terms-and-conditions")({
 function TermsAndConditions() {
   return (
     <LegalPage title="Terms & Conditions" updated="September 2026">
-      <P>Welcome to InstaPark, and thank you for using our services.</P>
+      <P>Welcome to InstaPark — thanks for choosing our services.</P>
       <P>
-        Please read these Terms & Conditions before using our application or
-        website.
+        Please read these Terms & Conditions before you use our app or website.
       </P>
       <P>
-        These Terms of Use of the InstaPark website and mobile application are
-        made between InstaPark (a company incorporated under [APPLICABLE COMPANY
-        LAW], having its registered address at [ADDRESS]) and yourself/the User
-        of InstaPark. If you continue to browse the website and/or use the
-        mobile application, you are agreeing to comply with and be bound by
-        these Terms of Use.
+        These Terms of Use govern the relationship between InstaPark (incorporated under
+        [APPLICABLE COMPANY LAW], with its registered office at [ADDRESS]) and you, the User. By
+        continuing to browse the website or use the app, you're agreeing to be bound by these
+        Terms.
       </P>
 
       <H2>1. Definitions</H2>
       <Ul
         items={[
-          "\"We,\" \"Our,\" \"Us\" shall be interpreted as InstaPark.",
-          "\"You,\" \"your,\" \"User\" shall mean any person accessing or using the InstaPark website or application, including in the capacity of Owner/Provider, Admin, Supervisor, Driver, Host, or Guest.",
-          "\"Provider\" or \"Owner\" means the valet or parking service operator using InstaPark to manage their operations.",
-          "\"Admin\" and \"Supervisor\" mean staff authorized by a Provider to manage drivers and event operations through the platform.",
-          "\"Driver\" means an individual engaged by a Provider to carry out park/retrieval services through the application.",
-          "\"Host\" means an individual or business (e.g., a hotel or event organizer) authorized to manage guest pre-registration for a specific event.",
-          "\"Guest\" means an end user whose vehicle is parked or retrieved through the platform.",
-          "\"Application\" shall mean the mobile application \"InstaPark,\" as updated by InstaPark from time to time.",
-          "\"Services\" shall mean the valet and event-parking management services provided via the Application/Website, including driver coordination, QR-based pre-registration, and related tools.",
-          "\"Force Majeure\" includes but is not limited to strikes, lockouts, labour disturbances, civil commotion, riots, acts of government or regulatory authority, abnormal weather conditions, or any other cause beyond the reasonable control of the affected party.",
+          "\u201CWe,\u201D \u201COur,\u201D and \u201CUs\u201D refer to InstaPark.",
+          "\u201CYou,\u201D \u201Cyour,\u201D and \u201CUser\u201D mean anyone accessing or using the InstaPark website or app, whether as an Owner/Provider, Admin, Supervisor, Driver, Host, or Guest.",
+          "\u201CProvider\u201D or \u201COwner\u201D refers to the valet or parking service operator using InstaPark to run their operations.",
+          "\u201CAdmin\u201D and \u201CSupervisor\u201D refer to staff a Provider has authorized to manage drivers and event operations on the platform.",
+          "\u201CDriver\u201D means someone engaged by a Provider to carry out park/retrieval jobs through the app.",
+          "\u201CHost\u201D means an individual or business — a hotel or event organizer, for example — authorized to handle guest pre-registration for a given event.",
+          "\u201CGuest\u201D means the end user whose vehicle gets parked or retrieved through the platform.",
+          "\u201CApplication\u201D means the \u201CInstaPark\u201D mobile app, including any updates InstaPark releases over time.",
+          "\u201CServices\u201D means the valet and event-parking management services delivered through the Application/Website, including driver coordination, QR-based pre-registration, and related tools.",
+          "\u201CForce Majeure\u201D includes, without limitation, strikes, lockouts, labour disputes, civil unrest, riots, government or regulatory action, extreme weather, or any other cause beyond the reasonable control of the party affected.",
         ]}
       />
 
       <H2>2. Eligibility</H2>
       <P>
-        Our services are available only to individuals and entities competent to
-        enter into a contract under applicable law. Users must be at least 18
-        years of age to register an account. If you are not eligible, you must
-        not attempt to register. We rely on the information you provide and are
-        not responsible for its accuracy.
+        Our Services are open only to individuals and entities legally able to enter into a
+        contract. You must be at least 18 to register an account. If you don't meet that bar,
+        please don't attempt to register. We rely on the accuracy of what you tell us and take no
+        responsibility if it turns out to be wrong.
       </P>
 
       <H2>3. Registration and Account</H2>
       <Ul
         items={[
-          "You may register on the application by entering the required registration data, which must be accurate, valid, true, and complete.",
-          "You are solely responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.",
-          "We reserve the right to suspend or terminate an account with immediate effect if we have reason to believe registration data is false, or that account security has been compromised.",
-          "Each user may hold only one account associated with their registration data, unless otherwise authorized by their Provider.",
-          "For any account access issues, contact us at [SUPPORT EMAIL].",
+          "You can register on the app by supplying the required details, which must be accurate, valid, true, and complete.",
+          "Keeping your account credentials confidential, and taking responsibility for everything that happens under your account, is entirely on you.",
+          "We can suspend or close an account immediately if we have reason to think the registration details are false or that the account's security has been compromised.",
+          "Each user is limited to one account tied to their registration details, unless their Provider authorizes otherwise.",
+          "Having trouble accessing your account? Reach us at [SUPPORT EMAIL].",
         ]}
       />
 
       <H2>4. Use of Services</H2>
       <Ul
         items={[
-          "InstaPark provides technology-based tools for Providers to manage valet and event-parking operations, including coordinating Drivers, Supervisors, Admins, and Hosts, and enabling Guests to pre-register vehicles via QR code.",
-          "InstaPark does not itself provide valet, driving, or parking services — it is a technology intermediary. The actual provision of parking/retrieval services is between the Guest and the relevant Provider/Driver, and InstaPark is not a party to that arrangement. InstaPark disclaims liability in respect of Drivers, including any claim of employment or vicarious liability arising from the Services.",
-          "When a park or retrieval request is made, the application uses location data from the Driver's device to coordinate the request among relevant Supervisors and Hosts.",
+          "InstaPark supplies technology tools that let Providers manage valet and event-parking operations — coordinating Drivers, Supervisors, Admins, and Hosts, and letting Guests pre-register vehicles by QR code.",
+          "InstaPark itself doesn't provide valet, driving, or parking services — we're a technology go-between. The actual parking/retrieval service happens between the Guest and the relevant Provider/Driver, and InstaPark isn't a party to that arrangement. InstaPark takes no liability with respect to Drivers, including any claim of employment or vicarious liability stemming from the Services.",
+          "When a park or retrieval request comes in, the app uses the Driver's device location to coordinate that request among the relevant Supervisors and Hosts.",
         ]}
       />
 
       <H2>5. Representations & Warranties</H2>
       <Ul
         items={[
-          "You confirm that the information you provide to InstaPark is accurate and complete, and that InstaPark may verify this information at any time.",
-          "Providers confirm they have the legal right and authority to operate their valet/parking business and to engage the Drivers, Supervisors, and Admins registered under their account.",
-          "In the event of an accident or dispute during a park/retrieval run, the Provider and Driver involved are responsible for complying with applicable laws; InstaPark shall not be held responsible.",
+          "You confirm that whatever information you give InstaPark is accurate and complete, and that InstaPark may verify it at any point.",
+          "Providers confirm they're legally entitled to run their valet/parking business and to engage the Drivers, Supervisors, and Admins registered under their account.",
+          "If an accident or dispute arises during a park/retrieval job, the Provider and Driver involved are responsible for meeting their legal obligations; InstaPark bears no responsibility.",
         ]}
       />
 
       <H2>6. Charges & Payment</H2>
       <P>
-        InstaPark does not currently charge fees or process any payments,
-        subscriptions, or payouts through the application or website, and no
-        payment gateway is integrated into the platform at this time. Should
-        InstaPark introduce paid features, subscriptions, or in-app payments in
-        the future, this section will be updated to describe the applicable
-        charges and payment terms before any such feature goes live.
+        InstaPark doesn't currently charge fees or process payments, subscriptions, or payouts
+        through the app or website, and no payment gateway is currently built into the platform.
+        If InstaPark launches paid features, subscriptions, or in-app payments later on, this
+        section will be updated to explain the relevant charges and payment terms before that
+        feature goes live.
       </P>
 
       <H2>7. Customer Relationship Management</H2>
       <Ul
         items={[
-          "Issues, suggestions, questions, and feedback can be communicated to us via the app, website, or email.",
-          "Reported issues should be raised within 7 days of the issue occurring. We aim to respond within 7 working days and resolve issues based on severity.",
+          "You can send us issues, suggestions, questions, or feedback through the app, the website, or by email.",
+          "Please raise any issue within 7 days of it happening. We aim to respond within 7 working days and resolve issues according to how serious they are.",
         ]}
       />
 
       <H2>8. Liability</H2>
       <Ul
         items={[
-          "Information provided on or through the InstaPark website/application is for general informational purposes only and does not constitute advice.",
-          "InstaPark shall not be liable for damages resulting from the use of, or inability to use, the website/application, including damages caused by malware, viruses, network issues, or incomplete/incorrect information.",
-          "The quality of parking/retrieval services delivered is the responsibility of the Provider and Driver who ultimately perform them. InstaPark accepts no liability in connection with the acts, conduct, or negligence of any Provider, Driver, Supervisor, Admin, or Host.",
+          "Anything provided on or through the InstaPark website/app is for general information only and isn't advice.",
+          "InstaPark isn't liable for damage arising from using — or being unable to use — the website/app, including damage caused by malware, viruses, network problems, or information that's incomplete or incorrect.",
+          "How well parking/retrieval services are actually delivered is down to the Provider and Driver who perform them. InstaPark takes no liability for the acts, conduct, or negligence of any Provider, Driver, Supervisor, Admin, or Host.",
         ]}
       />
 
       <H2>9. Intellectual Property Rights</H2>
       <P>
-        InstaPark is the sole owner of all rights to the website/application and
-        its content. All title, ownership, and intellectual property rights in
-        the application and its content remain with InstaPark. Users may access
-        the application only for their personal or authorized business use.
+        InstaPark solely owns all rights to the website/app and its content. Every element of
+        title, ownership, and intellectual property in the app and its content stays with
+        InstaPark. Users may access the app only for their own personal use, or for authorized
+        business use.
       </P>
 
       <H2>10. Links to Third-Party Sites</H2>
       <P>
-        InstaPark may provide links to third-party sites. We have no control
-        over such sites' content or practices and are not responsible or liable
-        for them.
+        InstaPark may link to third-party sites. We don't control what those sites contain or how
+        they operate, and we're not responsible or liable for them.
       </P>
 
       <H2>11. Violation of Terms & Termination</H2>
       <Ul
         items={[
-          "InstaPark reserves the right to deny, suspend, or terminate access to any user found violating these Terms or applicable law, without prior notice.",
-          "Upon termination, your account will be disabled, and you may not create another account without written consent from InstaPark.",
+          "InstaPark can deny, suspend, or terminate a user's access without advance notice if that user is found to be violating these Terms or the law.",
+          "Once terminated, your account is disabled, and you can't open another one without InstaPark's written consent.",
         ]}
       />
 
       <H2>12. Indemnification</H2>
       <P>
-        By using InstaPark, you agree to defend, indemnify, and hold InstaPark,
-        its affiliates, officers, directors, employees, and agents harmless from
-        any claims, costs, damages, or liabilities arising out of your violation
-        of these Terms or applicable law, or your violation of the rights of any
-        third party.
+        By using InstaPark, you agree to defend, indemnify, and hold harmless InstaPark, its
+        affiliates, officers, directors, employees, and agents against any claims, costs,
+        damages, or liabilities that arise from your breach of these Terms or the law, or from
+        your violation of anyone else's rights.
       </P>
 
       <H2>13. Force Majeure</H2>
       <P>
-        InstaPark shall not be liable for any failure to perform its obligations
-        under these Terms where such failure results from a Force Majeure Event,
-        for as long as that event continues.
+        InstaPark isn't liable for failing to meet its obligations under these Terms where that
+        failure stems from a Force Majeure Event, for as long as that event lasts.
       </P>
 
       <H2>14. Miscellaneous</H2>
       <P>
-        The information contained in the website/application is for general
-        informational purposes only, and any reliance on it is at your own risk.
-        InstaPark is not responsible for the website/application being
-        unavailable due to technical issues beyond our control.
+        Content on the website/app is for general information only, and relying on it is at your
+        own risk. InstaPark isn't responsible for the website/app being unavailable due to
+        technical issues beyond our control.
       </P>
 
       <H2>15. Jurisdiction</H2>
       <P>
-        The courts of Ahmedabad, India shall have sole and exclusive
-        jurisdiction in respect of any matters arising from the use of InstaPark
-        or these Terms of Use.
+        Any matter arising from the use of InstaPark or these Terms of Use falls under the sole
+        and exclusive jurisdiction of the courts of Ahmedabad, India.
       </P>
     </LegalPage>
   );
