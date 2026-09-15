@@ -24,38 +24,32 @@ function Disclaimer() {
   return (
     <LegalPage title="Disclaimer" updated="September 2026">
       <P>
-        The user agrees and acknowledges that use of the InstaPark mobile
-        app/website is at their sole risk, and that InstaPark disclaims all
-        representations and warranties of any kind, whether express or implied,
-        as to condition, suitability, quality, and fitness for any purpose, to
-        the fullest extent permitted by law.
+        By using the InstaPark app or website, you accept that you do so entirely at your own
+        risk, and that InstaPark makes no representations or warranties of any kind — express or
+        implied — regarding its condition, suitability, quality, or fitness for any particular
+        purpose, to the fullest extent the law allows.
       </P>
       <P>
-        The information contained on this website/application is provided solely
-        for general informational purposes by InstaPark. While we endeavor to
-        keep information up to date and correct, we make no representations or
-        warranties of any kind, express or implied, about the completeness,
-        accuracy, reliability, suitability, or availability of the website,
-        application, or related content for any purpose. Any reliance you place
-        on such information is strictly at your own risk.
+        The content on this website/app is offered purely for general information by InstaPark.
+        While we try to keep it accurate and current, we don't guarantee, in any form, the
+        completeness, accuracy, reliability, suitability, or availability of the site, the app, or
+        any related content for any given purpose. If you choose to rely on this information, that
+        reliance is entirely at your own risk.
       </P>
       <P>
-        In no event will we be liable for any loss or damage, including without
-        limitation indirect or consequential loss or damage, or any loss or
-        damage arising from loss of data or profits, arising out of or in
-        connection with the use of this website or application.
+        We won't be liable, under any circumstances, for loss or damage of any kind — including,
+        without limitation, indirect or consequential loss, or loss connected to lost data or
+        profits — arising from or connected with your use of this website or app.
       </P>
       <P>
-        Through InstaPark you may be able to link to other websites which are
-        not under our control. We have no control over the nature, content, or
-        availability of those sites, and inclusion of any link does not imply a
-        recommendation or endorsement.
+        InstaPark may contain links to other websites that we don't control. We have no say over
+        the content or practices of those sites, and linking to them doesn't mean we recommend or
+        endorse them.
       </P>
       <P>
-        Every effort is made to keep InstaPark up and running smoothly. However,
-        InstaPark takes no responsibility for, and will not be liable for, the
-        website/application being temporarily unavailable due to technical
-        issues beyond our control.
+        We work hard to keep InstaPark running reliably. Even so, InstaPark isn't responsible, and
+        won't be held liable, for the website or app being temporarily unreachable because of
+        technical problems outside our control.
       </P>
     </LegalPage>
   );
