@@ -29,9 +29,16 @@ function TermsAndConditions() {
       </P>
       <P>
         These Terms of Use govern the relationship between InstaPark (incorporated under
-        [APPLICABLE COMPANY LAW], with its registered office at [ADDRESS]) and you, the User. By
-        continuing to browse the website or use the app, you're agreeing to be bound by these
-        Terms.
+        [APPLICABLE COMPANY LAW], with its registered office at 306, Shail's Mall,
+        <br />
+        B/h. Girish Coldrinks,
+        <br />
+        C.G. Road,
+        <br />
+        Ahmedabad – 380 006,
+        <br />
+        GUJARAT, INDIA) and you, the User. By continuing to browse the website or use the app,
+        you're agreeing to be bound by these Terms.
       </P>
 
       <H2>1. Definitions</H2>
@@ -65,7 +72,7 @@ function TermsAndConditions() {
           "Keeping your account credentials confidential, and taking responsibility for everything that happens under your account, is entirely on you.",
           "We can suspend or close an account immediately if we have reason to think the registration details are false or that the account's security has been compromised.",
           "Each user is limited to one account tied to their registration details, unless their Provider authorizes otherwise.",
-          "Having trouble accessing your account? Reach us at [SUPPORT EMAIL].",
+          "Having trouble accessing your account? Reach us at connect.instapark@gmail.com.",
         ]}
       />
 
