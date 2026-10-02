@@ -141,7 +141,7 @@ function PrivacyPolicy() {
       <H2>Account & Data Deletion</H2>
       <P>
         You can ask to have your account and the personal data tied to it deleted at any time —
-        email us at [SUPPORT EMAIL]. Our team reviews each request; once it's approved, your
+        email us at connect.instapark@gmail.com. Our team reviews each request; once it's approved, your
         account and its data are permanently removed from our systems within 7 business days,
         except where the law requires us to retain something (see Data Retention above). You can
         use this process whether or not your account is currently active.
@@ -163,7 +163,7 @@ function PrivacyPolicy() {
       <H2>Grievance Redressal</H2>
       <P>
         Questions about this Privacy Policy or how we handle data, or a grievance you'd like to
-        raise, can be sent to [GRIEVANCE EMAIL].
+        raise, can be sent to connect.instapark@gmail.com.
       </P>
 
       <H2>Information Collected Automatically</H2>
