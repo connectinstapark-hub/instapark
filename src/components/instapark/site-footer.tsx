@@ -88,7 +88,13 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-brand-foreground/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} InstaPark. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} InstaPark. All rights reserved.
+            <span className="mx-2 text-white/15">·</span>
+            <span className="text-brand-foreground/70">
+              A product of Pinsoftek
+            </span>
+          </p>
           <p>Valet management platform · Multi-tenant by design</p>
         </div>
       </div>
