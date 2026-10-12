@@ -45,10 +45,14 @@ export function Hero() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-brand-foreground/75 sm:text-lg">
-              InstaPark unifies hotels, event venues, and large-scale grounds on
-              one platform: live GPS spot tagging for open lots, real-time driver
-              tracking, and an app-free QR guest experience — with a full
-              photo-and-timestamp audit trail on every vehicle.
+              InstaPark, a product of Pinsoftek, is an intelligent parking
+              management platform that unifies hotels, event venues, and
+              large-scale parking grounds in one seamless solution. With live GPS
+              spot tagging, real-time vehicle tracking, and an app-free QR-based
+              guest experience, InstaPark streamlines parking operations while
+              maintaining a complete photo-and-timestamp audit trail for every
+              vehicle — ensuring greater visibility, accountability, and
+              operational efficiency.
             </p>
           </Reveal>
           <Reveal delay={240}>
