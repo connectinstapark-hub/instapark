@@ -38,21 +38,21 @@ export function Hero() {
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-6 text-4xl font-bold leading-[1.08] text-brand-foreground sm:text-5xl lg:text-6xl">
-              Run valet operations in{" "}
-              <span className="text-gold">real time</span> — from digital intake
-              to instant retrieval.
+              Smarter Parking. Seamless Valet Operations.{" "}
+              <span className="text-gold">Complete Control.</span>
             </h1>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-brand-foreground/75 sm:text-lg">
-              InstaPark, a product of Pinsoftek, is an intelligent parking
-              management platform that unifies hotels, event venues, and
-              large-scale parking grounds in one seamless solution. With live GPS
-              spot tagging, real-time vehicle tracking, and an app-free QR-based
-              guest experience, InstaPark streamlines parking operations while
-              maintaining a complete photo-and-timestamp audit trail for every
-              vehicle — ensuring greater visibility, accountability, and
-              operational efficiency.
+              InstaPark, a product of Pinsoftek, transforms how parking and valet
+              services are managed across hotels, event venues, large-scale
+              parking grounds, and valet agencies. From live GPS spot tagging for
+              open lots and real-time driver tracking to an app-free QR-based
+              guest experience, InstaPark brings every aspect of parking
+              operations together on one intelligent platform. With a complete
+              photo-and-timestamp audit trail for every vehicle, InstaPark
+              delivers greater visibility, accountability, security, and
+              operational efficiency — from vehicle drop-off to retrieval.
             </p>
           </Reveal>
           <Reveal delay={240}>
