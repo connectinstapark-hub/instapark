@@ -33,7 +33,7 @@ const groups = [
     title: "Contact",
     links: [
       { label: "Book a demo", href: "#contact" },
-      { label: "sales@instapark.example", href: "#contact" },
+      { label: "connect.instapark@gmail.com", href: "mailto:connect.instapark@gmail.com" },
       { label: "Support", href: "#contact" },
     ],
   },

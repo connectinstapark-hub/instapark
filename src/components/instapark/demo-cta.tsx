@@ -107,10 +107,22 @@ export function DemoCta() {
           </p>
           <ul className="mt-8 space-y-3 text-sm text-brand-foreground/80">
             <li className="flex items-center gap-3">
-              <Mail className="size-4 text-gold" /> sales@instapark.example
+              <Mail className="size-4 text-gold" />
+              <a
+                href="mailto:connect.instapark@gmail.com"
+                className="transition-colors hover:text-gold"
+              >
+                connect.instapark@gmail.com
+              </a>
             </li>
             <li className="flex items-center gap-3">
-              <Phone className="size-4 text-gold" /> +1 (555) 018-4420
+              <Phone className="size-4 text-gold" />
+              <a
+                href="tel:+917990317623"
+                className="transition-colors hover:text-gold"
+              >
+                +91 7990317623
+              </a>
             </li>
           </ul>
         </Reveal>
