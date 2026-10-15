@@ -22,6 +22,8 @@ import { Route as QrKeyManagementRouteImport } from './routes/qr-key-management'
 import { Route as RestaurantValetSoftwareRouteImport } from './routes/restaurant-valet-software'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as ValetManagementSoftwareRouteImport } from './routes/valet-management-software'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -88,6 +90,16 @@ const ValetManagementSoftwareRoute = ValetManagementSoftwareRouteImport.update({
   path: '/valet-management-software',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -103,6 +115,8 @@ export interface FileRoutesByFullPath {
   '/restaurant-valet-software': typeof RestaurantValetSoftwareRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/valet-management-software': typeof ValetManagementSoftwareRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -118,6 +132,8 @@ export interface FileRoutesByTo {
   '/restaurant-valet-software': typeof RestaurantValetSoftwareRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/valet-management-software': typeof ValetManagementSoftwareRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -134,6 +150,8 @@ export interface FileRoutesById {
   '/restaurant-valet-software': typeof RestaurantValetSoftwareRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/valet-management-software': typeof ValetManagementSoftwareRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -151,6 +169,8 @@ export interface FileRouteTypes {
     | '/restaurant-valet-software'
     | '/terms-and-conditions'
     | '/valet-management-software'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -166,6 +186,8 @@ export interface FileRouteTypes {
     | '/restaurant-valet-software'
     | '/terms-and-conditions'
     | '/valet-management-software'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -181,6 +203,8 @@ export interface FileRouteTypes {
     | '/restaurant-valet-software'
     | '/terms-and-conditions'
     | '/valet-management-software'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -197,6 +221,8 @@ export interface RootRouteChildren {
   RestaurantValetSoftwareRoute: typeof RestaurantValetSoftwareRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   ValetManagementSoftwareRoute: typeof ValetManagementSoftwareRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -292,6 +318,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ValetManagementSoftwareRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -309,6 +349,8 @@ const rootRouteChildren: RootRouteChildren = {
   RestaurantValetSoftwareRoute: RestaurantValetSoftwareRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
   ValetManagementSoftwareRoute: ValetManagementSoftwareRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
