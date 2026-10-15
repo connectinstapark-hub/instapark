@@ -1,0 +1,32 @@
+# InstaPark
+
+> InstaPark is a valet management platform built by Pinsoftek (Ahmedabad, India). It replaces paper valet tickets and key boards with digital check-in, QR key tags, timestamped vehicle photos, GPS spot tagging, live driver tracking, an app-free QR guest pass and audit reporting.
+
+## Who it is for
+Hotels, restaurants, malls, hospitals, event and wedding venues, large parking grounds, corporate campuses and valet service companies. Primary market: India; also available globally. Multi-tenant: one valet agency can run many venues.
+
+## Key features
+- Digital valet check-in and check-out
+- QR key tag tracking, scanned at every handover
+- Timestamped vehicle condition photos
+- Lot zone and GPS parking spot tagging
+- Real-time driver tracking and task queue
+- App-free QR guest pass for status and retrieval requests
+- Staff, shift and role-based access
+- Audit trail, incident review and reports
+
+## Key pages
+- [Valet management software](https://www.instapark.app/valet-management-software)
+- [QR key management](https://www.instapark.app/qr-key-management)
+- [Hotel valet software](https://www.instapark.app/hotel-valet-software)
+- [Restaurant valet software](https://www.instapark.app/restaurant-valet-software)
+- [Hospital and mall valet](https://www.instapark.app/hospital-and-mall-valet)
+- [How it works](https://www.instapark.app/how-it-works)
+- [FAQ](https://www.instapark.app/faq)
+- [About InstaPark and Pinsoftek](https://www.instapark.app/about)
+- [Blog](https://www.instapark.app/blog)
+
+## Contact
+Email: connect.instapark@gmail.com · Phone: +91 7990317623
+Address: 306, Shail's Mall, B/h. Girish Coldrinks, C.G. Road, Ahmedabad – 380 006, Gujarat, India
+Company: Pinsoftek — https://www.pinsoftek.com

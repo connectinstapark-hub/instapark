@@ -4,11 +4,11 @@ import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Platform", href: "#platform" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Interfaces", href: "#interfaces" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Platform", href: "/#platform" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Interfaces", href: "/#interfaces" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function SiteNav() {
@@ -35,7 +35,7 @@ export function SiteNav() {
         aria-label="Main"
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8"
       >
-        <a href="#top" className="shrink-0">
+        <a href="/#top" className="shrink-0">
           <Logo tone="light" />
         </a>
 
@@ -50,7 +50,7 @@ export function SiteNav() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="gold-gradient corner-cut px-5 py-2.5 text-sm font-semibold text-gold-foreground shadow-lg shadow-black/20 transition-transform hover:-translate-y-0.5"
           >
             Book a Demo
@@ -84,7 +84,7 @@ export function SiteNav() {
             ))}
           </ul>
           <a
-            href="#contact"
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="gold-gradient corner-cut mt-5 block px-5 py-3 text-center text-sm font-semibold text-gold-foreground"
           >

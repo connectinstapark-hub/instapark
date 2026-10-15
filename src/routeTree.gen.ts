@@ -10,13 +10,29 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HospitalAndMallValetRouteImport } from './routes/hospital-and-mall-valet'
+import { Route as HotelValetSoftwareRouteImport } from './routes/hotel-valet-software'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as PressRouteImport } from './routes/press'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as QrKeyManagementRouteImport } from './routes/qr-key-management'
+import { Route as RestaurantValetSoftwareRouteImport } from './routes/restaurant-valet-software'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as ValetManagementSoftwareRouteImport } from './routes/valet-management-software'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DisclaimerRoute = DisclaimerRouteImport.update({
@@ -24,9 +40,44 @@ const DisclaimerRoute = DisclaimerRouteImport.update({
   path: '/disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HospitalAndMallValetRoute = HospitalAndMallValetRouteImport.update({
+  id: '/hospital-and-mall-valet',
+  path: '/hospital-and-mall-valet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelValetSoftwareRoute = HotelValetSoftwareRouteImport.update({
+  id: '/hotel-valet-software',
+  path: '/hotel-valet-software',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PressRoute = PressRouteImport.update({
+  id: '/press',
+  path: '/press',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QrKeyManagementRoute = QrKeyManagementRouteImport.update({
+  id: '/qr-key-management',
+  path: '/qr-key-management',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurantValetSoftwareRoute = RestaurantValetSoftwareRouteImport.update({
+  id: '/restaurant-valet-software',
+  path: '/restaurant-valet-software',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
@@ -34,44 +85,144 @@ const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   path: '/terms-and-conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ValetManagementSoftwareRoute = ValetManagementSoftwareRouteImport.update({
+  id: '/valet-management-software',
+  path: '/valet-management-software',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/hospital-and-mall-valet': typeof HospitalAndMallValetRoute
+  '/hotel-valet-software': typeof HotelValetSoftwareRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/press': typeof PressRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/qr-key-management': typeof QrKeyManagementRoute
+  '/restaurant-valet-software': typeof RestaurantValetSoftwareRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/valet-management-software': typeof ValetManagementSoftwareRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/hospital-and-mall-valet': typeof HospitalAndMallValetRoute
+  '/hotel-valet-software': typeof HotelValetSoftwareRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/press': typeof PressRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/qr-key-management': typeof QrKeyManagementRoute
+  '/restaurant-valet-software': typeof RestaurantValetSoftwareRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/valet-management-software': typeof ValetManagementSoftwareRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/hospital-and-mall-valet': typeof HospitalAndMallValetRoute
+  '/hotel-valet-software': typeof HotelValetSoftwareRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/press': typeof PressRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/qr-key-management': typeof QrKeyManagementRoute
+  '/restaurant-valet-software': typeof RestaurantValetSoftwareRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/valet-management-software': typeof ValetManagementSoftwareRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/disclaimer' | '/privacy-policy' | '/terms-and-conditions'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/disclaimer'
+    | '/faq'
+    | '/hospital-and-mall-valet'
+    | '/hotel-valet-software'
+    | '/how-it-works'
+    | '/press'
+    | '/privacy-policy'
+    | '/qr-key-management'
+    | '/restaurant-valet-software'
+    | '/terms-and-conditions'
+    | '/valet-management-software'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/disclaimer' | '/privacy-policy' | '/terms-and-conditions'
+  to:
+    | '/'
+    | '/about'
+    | '/disclaimer'
+    | '/faq'
+    | '/hospital-and-mall-valet'
+    | '/hotel-valet-software'
+    | '/how-it-works'
+    | '/press'
+    | '/privacy-policy'
+    | '/qr-key-management'
+    | '/restaurant-valet-software'
+    | '/terms-and-conditions'
+    | '/valet-management-software'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/disclaimer'
+    | '/faq'
+    | '/hospital-and-mall-valet'
+    | '/hotel-valet-software'
+    | '/how-it-works'
+    | '/press'
     | '/privacy-policy'
+    | '/qr-key-management'
+    | '/restaurant-valet-software'
     | '/terms-and-conditions'
+    | '/valet-management-software'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  FaqRoute: typeof FaqRoute
+  HospitalAndMallValetRoute: typeof HospitalAndMallValetRoute
+  HotelValetSoftwareRoute: typeof HotelValetSoftwareRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  PressRoute: typeof PressRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  QrKeyManagementRoute: typeof QrKeyManagementRoute
+  RestaurantValetSoftwareRoute: typeof RestaurantValetSoftwareRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  ValetManagementSoftwareRoute: typeof ValetManagementSoftwareRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -83,11 +234,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/disclaimer': {
       id: '/disclaimer'
       path: '/disclaimer'
       fullPath: '/disclaimer'
       preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hospital-and-mall-valet': {
+      id: '/hospital-and-mall-valet'
+      path: '/hospital-and-mall-valet'
+      fullPath: '/hospital-and-mall-valet'
+      preLoaderRoute: typeof HospitalAndMallValetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-valet-software': {
+      id: '/hotel-valet-software'
+      path: '/hotel-valet-software'
+      fullPath: '/hotel-valet-software'
+      preLoaderRoute: typeof HotelValetSoftwareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/press': {
+      id: '/press'
+      path: '/press'
+      fullPath: '/press'
+      preLoaderRoute: typeof PressRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -97,6 +290,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/qr-key-management': {
+      id: '/qr-key-management'
+      path: '/qr-key-management'
+      fullPath: '/qr-key-management'
+      preLoaderRoute: typeof QrKeyManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurant-valet-software': {
+      id: '/restaurant-valet-software'
+      path: '/restaurant-valet-software'
+      fullPath: '/restaurant-valet-software'
+      preLoaderRoute: typeof RestaurantValetSoftwareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms-and-conditions': {
       id: '/terms-and-conditions'
       path: '/terms-and-conditions'
@@ -104,14 +311,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsAndConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/valet-management-software': {
+      id: '/valet-management-software'
+      path: '/valet-management-software'
+      fullPath: '/valet-management-software'
+      preLoaderRoute: typeof ValetManagementSoftwareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   DisclaimerRoute: DisclaimerRoute,
+  FaqRoute: FaqRoute,
+  HospitalAndMallValetRoute: HospitalAndMallValetRoute,
+  HotelValetSoftwareRoute: HotelValetSoftwareRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  PressRoute: PressRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  QrKeyManagementRoute: QrKeyManagementRoute,
+  RestaurantValetSoftwareRoute: RestaurantValetSoftwareRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
+  ValetManagementSoftwareRoute: ValetManagementSoftwareRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
