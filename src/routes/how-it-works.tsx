@@ -50,7 +50,7 @@ const SECTIONS: Section[] = [
 ];
 
 export const Route = createFileRoute("/how-it-works")({
-  head: () => seoHead({ path: "/how-it-works", title: TITLE, description: DESC, schemas: [breadcrumb([{ name: "How it works", path: "/how-it-works" }]), { "@context": "https://schema.org", "@type": "HowTo", name: "How InstaPark runs a valet operation", step: SECTIONS[0].steps!.map((t, i) => ({ "@type": "HowToStep", position: i + 1, text: t })) }] }),
+  head: () => seoHead({ path: "/how-it-works", title: TITLE, description: DESC, schemas: [breadcrumb([{ name: "How it works", path: "/how-it-works" }]), { "@context": "https://schema.org", "@type": "HowTo", name: "How InstaPark runs a valet operation", step: SECTIONS[0]!.steps!.map((t, i) => ({ "@type": "HowToStep", position: i + 1, text: t })) }] }),
   component: Page,
 });
 
