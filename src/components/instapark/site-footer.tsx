@@ -91,9 +91,14 @@ export function SiteFooter() {
           <p>
             © {new Date().getFullYear()} InstaPark. All rights reserved.
             <span className="mx-2 text-white/15">·</span>
-            <span className="text-brand-foreground/70">
+            <a
+              href="https://www.pinsoftek.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-foreground/70 underline-offset-4 transition-colors hover:text-gold hover:underline"
+            >
               A product of Pinsoftek
-            </span>
+            </a>
           </p>
           <p>Valet management platform · Multi-tenant by design</p>
         </div>
