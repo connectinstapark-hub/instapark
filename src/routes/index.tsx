@@ -6,7 +6,8 @@ import { Interfaces } from "@/components/instapark/interfaces";
 import { HowItWorks } from "@/components/instapark/how-it-works";
 import { Differentiators } from "@/components/instapark/differentiators";
 import { Audiences } from "@/components/instapark/audiences";
-import { SocialProof } from "@/components/instapark/social-proof";
+// Social proof is hidden until real customer reviews are available — see src/components/instapark/social-proof.tsx
+// import { SocialProof } from "@/components/instapark/social-proof";
 import { Pricing } from "@/components/instapark/pricing";
 import { DemoCta } from "@/components/instapark/demo-cta";
 import { SiteFooter } from "@/components/instapark/site-footer";
@@ -43,7 +44,7 @@ function Index() {
         <HowItWorks />
         <Differentiators />
         <Audiences />
-        <SocialProof />
+        {/* Social proof hidden — no real reviews yet */}
         <Pricing />
         <DemoCta />
       </main>
