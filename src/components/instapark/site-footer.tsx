@@ -3,38 +3,40 @@ import { Logo } from "./logo";
 
 const groups = [
   {
-    title: "Product",
+    title: "Solutions",
     links: [
-      { label: "Platform", href: "#platform" },
-      { label: "Interfaces", href: "#interfaces" },
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "Pricing", href: "#pricing" },
+      { label: "Valet management software", href: "/valet-management-software" },
+      { label: "QR key management", href: "/qr-key-management" },
+      { label: "Hotel valet software", href: "/hotel-valet-software" },
+      { label: "Restaurant valet software", href: "/restaurant-valet-software" },
+      { label: "Hospital & mall valet", href: "/hospital-and-mall-valet" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "How it works", href: "/how-it-works" },
+      { label: "Valet FAQs", href: "/faq" },
+      { label: "Blog", href: "/blog" },
+      { label: "Pricing", href: "/#pricing" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#top" },
-      { label: "Who It's For", href: "#platform" },
-      { label: "Careers", href: "#contact" },
-      { label: "Press", href: "#contact" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
+      { label: "About InstaPark", href: "/about" },
+      { label: "Press", href: "/press" },
       { label: "Privacy", href: "/privacy-policy" },
       { label: "Terms", href: "/terms-and-conditions" },
       { label: "Disclaimer", href: "/disclaimer" },
-      { label: "Security", href: "#contact" },
     ],
   },
   {
     title: "Contact",
     links: [
-      { label: "Book a demo", href: "#contact" },
+      { label: "Book a demo", href: "/#contact" },
       { label: "connect.instapark@gmail.com", href: "mailto:connect.instapark@gmail.com" },
-      { label: "Support", href: "#contact" },
+      { label: "+91 7990317623", href: "tel:+917990317623" },
     ],
   },
 ];
@@ -54,7 +56,7 @@ export function SiteFooter() {
               {[Linkedin, Twitter, Youtube].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#contact"
+                  href="/#contact"
                   aria-label="InstaPark social profile"
                   className="inline-flex size-9 items-center justify-center rounded-lg border border-white/10 text-brand-foreground/70 transition-colors hover:border-gold hover:text-gold"
                 >

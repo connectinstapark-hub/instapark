@@ -11,12 +11,13 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { ORG, SITE_URL } from "../lib/seo";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h1 className="text-7xl font-bold text-primary">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
@@ -28,6 +29,10 @@ function NotFoundComponent() {
           >
             Go home
           </Link>
+          <p className="mt-6 text-sm text-muted-foreground">
+            Or explore <a className="text-primary underline" href="/valet-management-software">valet management software</a>,{" "}
+            <a className="text-primary underline" href="/faq">FAQs</a> and <a className="text-primary underline" href="/blog">the blog</a>.
+          </p>
         </div>
       </div>
     </div>
@@ -92,8 +97,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:site_name", content: "InstaPark" },
+      { property: "og:locale", content: "en_IN" },
+      { name: "theme-color", content: "#3F0163" },
+      // Search Console: add { name: "google-site-verification", content: "[GSC_TOKEN]" } once you have the token.
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            ORG,
+            { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: "InstaPark", url: SITE_URL, inLanguage: "en-IN", publisher: { "@id": `${SITE_URL}/#organization` } },
+            { "@type": "ProfessionalService", name: "InstaPark by Pinsoftek", url: SITE_URL, image: ORG.logo, telephone: "+91-7990317623", email: "connect.instapark@gmail.com", address: ORG.address, areaServed: { "@type": "Country", name: "India" } },
+          ],
+        }),
+      },
+      // Google Analytics 4: load https://www.googletagmanager.com/gtag/js?id=[GA4_ID] once you have the measurement ID.
     ],
     links: [
+      { rel: "apple-touch-icon", href: "/instapark-mark.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
