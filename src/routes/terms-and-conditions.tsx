@@ -13,6 +13,7 @@ export const Route = createFileRoute("/terms-and-conditions")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://park-instantly-lovely.lovable.app/terms-and-conditions" },
     ],
     links: [{ rel: "canonical", href: "https://park-instantly-lovely.lovable.app/terms-and-conditions" }],

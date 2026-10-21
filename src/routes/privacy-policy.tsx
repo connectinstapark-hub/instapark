@@ -13,6 +13,7 @@ export const Route = createFileRoute("/privacy-policy")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://park-instantly-lovely.lovable.app/privacy-policy" },
     ],
     links: [{ rel: "canonical", href: "https://park-instantly-lovely.lovable.app/privacy-policy" }],
@@ -22,7 +23,7 @@ export const Route = createFileRoute("/privacy-policy")({
 
 function PrivacyPolicy() {
   return (
-    <LegalPage title="Privacy Policy" updated="September 2026">
+    <LegalPage title="Privacy Policy" updated="October 2026">
       <P>
         This Privacy Policy explains how InstaPark gathers, uses, and shares information through
         its website, its mobile application, or in person. Please go through this Policy in full,
@@ -122,6 +123,33 @@ function PrivacyPolicy() {
         comparable tracking tools to study usage patterns, gauge effectiveness, and support trust
         and safety efforts. You can adjust your browser or device settings to block them, though
         doing so may limit some functionality.
+      </P>
+
+      <H2>Website Analytics and Advertising</H2>
+      <P>
+        We use Google Analytics (Google) to measure page visits and website usage, and AdRoll
+        (NextRoll) for advertising measurement, personalization and optimization. These services
+        may receive page URLs, IP addresses, browser and device information, online identifiers
+        and cookies. We do not send names, email addresses, phone numbers, vehicle records or
+        account details to these tags, and do not use customer matching or server-side advertising uploads.
+      </P>
+      <P>
+        In regions requiring consent, including the EU/EEA, UK, Switzerland, Brazil and Canada,
+        these tags remain blocked until you accept their respective purposes. If your region
+        cannot be determined, we ask before loading them. Elsewhere ordinary tracking is enabled
+        unless you refuse it. Analytics and advertising are separate choices. Global Privacy
+        Control and Do Not Track disable advertising. You may reject either purpose or withdraw
+        at any time using Cookie settings in the footer; withdrawal takes effect across open
+        tabs and refreshes the page to stop previously loaded tracking. Blocked visits are not
+        replayed after acceptance.
+      </P>
+      <P>
+        Essential first-party browser storage keeps a random visitor reference and a history of
+        your choices, with the region, time, notice version and notice text shown. Earlier acceptance
+        evidence is preserved when you withdraw. This preference history remains on your device
+        until you clear site storage; it is not uploaded to our servers. Clearing it may cause
+        the banner to appear again. Google and NextRoll may process information outside your
+        country under their own privacy terms. See <a className="text-primary underline" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a> and <a className="text-primary underline" href="https://www.nextroll.com/privacy" target="_blank" rel="noopener noreferrer">NextRoll’s Privacy Notice</a>.
       </P>
 
       <H2>Data Safety</H2>

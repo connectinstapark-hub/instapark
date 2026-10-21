@@ -1,5 +1,7 @@
 import { Linkedin, Twitter, Youtube } from "lucide-react";
 import { Logo } from "./logo";
+import { Button } from "@/components/ui/button";
+import { openCookieSettings } from "@/lib/tracking-consent";
 
 const groups = [
   {
@@ -102,7 +104,10 @@ export function SiteFooter() {
               A product of Pinsoftek
             </a>
           </p>
-          <p>Valet management platform · Multi-tenant by design</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p>Valet management platform · Multi-tenant by design</p>
+            <Button variant="link" onClick={openCookieSettings} className="h-auto p-0 text-xs text-brand-foreground/70">Cookie settings</Button>
+          </div>
         </div>
       </div>
     </footer>

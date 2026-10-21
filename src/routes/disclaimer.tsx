@@ -13,6 +13,7 @@ export const Route = createFileRoute("/disclaimer")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://park-instantly-lovely.lovable.app/disclaimer" },
     ],
     links: [{ rel: "canonical", href: "https://park-instantly-lovely.lovable.app/disclaimer" }],

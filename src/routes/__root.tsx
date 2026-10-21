@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { ORG, SITE_URL } from "../lib/seo";
+import { SiteTracking } from "../components/instapark/tracking";
 
 function NotFoundComponent() {
   return (
@@ -114,7 +115,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           ],
         }),
       },
-      // Google Analytics 4: load https://www.googletagmanager.com/gtag/js?id=[GA4_ID] once you have the measurement ID.
     ],
     links: [
       { rel: "apple-touch-icon", href: "/instapark-mark.png" },
@@ -159,6 +159,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <SiteTracking />
     </QueryClientProvider>
   );
 }
