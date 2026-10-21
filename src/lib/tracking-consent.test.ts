@@ -2,7 +2,7 @@ import { describe, expect, it } from "bun:test";
 import { permissions, requiresConsent } from "./tracking-consent";
 describe("regional consent", () => {
   it("blocks unresolved and UK/EU regions until a choice", () => {
-    for (const region of ["XX", "T1", "", "GB", "DE", "FR"]) {
+    for (const region of ["XX", "T1", "", "GB", "DE", "FR", "BR", "CA"]) {
       expect(requiresConsent(region)).toBe(true);
       expect(permissions(region, null, false)).toEqual({ analytics: false, advertising: false });
     }

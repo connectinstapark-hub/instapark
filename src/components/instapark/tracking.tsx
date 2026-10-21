@@ -27,6 +27,14 @@ function optOut() {
 function syncTracking(region: string, measurementId: string | null, path: string) {
   const w = window as TrackingWindow;
   const permission = permissions(region, latestChoice(), optOut());
+  // Terminate provider runtimes immediately instead of sending denied-mode pings.
+  if ((!permission.analytics && gaInstalled) || (!permission.advertising && adInstalled)) {
+    w.__adroll_consent = false;
+    location.reload();
+    return;
+  }
+  // This marketing site has no query-driven workflow; don't share URL identifiers.
+  if (location.search || location.hash) history.replaceState(history.state, "", path);
   w.gtag?.("consent", "update", { analytics_storage: permission.analytics ? "granted" : "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
   if (permission.analytics && measurementId) {
     const page = `${location.origin}${path}`;
@@ -61,24 +69,14 @@ function syncTracking(region: string, measurementId: string | null, path: string
       script.id = "instapark-adroll-tag";
       script.async = true;
       script.src = "https://s.adroll.com/j/QGVVEYYRPNFI3F2O6W43GU/roundtrip.js";
-      script.onload = () => {
-        if (permissions(region, latestChoice(), optOut()).advertising) {
-          w.adroll?.track("pageView");
-          adLastPage = location.pathname;
-        }
-      };
+      // roundtrip reports the initial visit itself; don't report it twice.
+      adLastPage = path;
       document.head.appendChild(script);
       adInstalled = true;
     } else if (adLastPage !== path && adLastPage) {
       w.adroll?.track("pageView");
       adLastPage = path;
     }
-  }
-  // Reload on withdrawal to terminate already-loaded third-party runtimes.
-  // Removing a script tag cannot stop its timers and event listeners.
-  if ((!permission.analytics && gaInstalled) || (!permission.advertising && adInstalled)) {
-    w.__adroll_consent = false;
-    location.reload();
   }
 }
 

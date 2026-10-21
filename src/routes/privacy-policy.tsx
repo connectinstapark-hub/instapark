@@ -13,6 +13,7 @@ export const Route = createFileRoute("/privacy-policy")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://park-instantly-lovely.lovable.app/privacy-policy" },
     ],
     links: [{ rel: "canonical", href: "https://park-instantly-lovely.lovable.app/privacy-policy" }],
@@ -124,7 +125,6 @@ function PrivacyPolicy() {
         doing so may limit some functionality.
       </P>
 
-      <H2>Data Safety</H2>
       <H2>Website Analytics and Advertising</H2>
       <P>
         We use Google Analytics (Google) to measure page visits and website usage, and AdRoll
