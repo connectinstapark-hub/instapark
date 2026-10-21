@@ -1,23 +1,24 @@
-import { describe, expect, it } from "bun:test";
+import { describe, it } from "node:test";
+import assert from "node:assert/strict";
 import { permissions, requiresConsent } from "./tracking-consent";
 describe("regional consent", () => {
   it("blocks unresolved and UK/EU regions until a choice", () => {
     for (const region of ["XX", "T1", "", "GB", "DE", "FR", "BR", "CA"]) {
-      expect(requiresConsent(region)).toBe(true);
-      expect(permissions(region, null, false)).toEqual({ analytics: false, advertising: false });
+      assert.equal(requiresConsent(region), true);
+      assert.deepEqual(permissions(region, null, false), { analytics: false, advertising: false });
     }
   });
   it("allows ordinary tracking in India without a banner", () => {
-    expect(requiresConsent("IN")).toBe(false);
-    expect(permissions("IN", null, false)).toEqual({ analytics: true, advertising: true });
+    assert.equal(requiresConsent("IN"), false);
+    assert.deepEqual(permissions("IN", null, false), { analytics: true, advertising: true });
   });
   it("never overrides explicit refusal with geography", () => {
-    expect(permissions("IN", { analytics: false, advertising: false }, false)).toEqual({ analytics: false, advertising: false });
+    assert.deepEqual(permissions("IN", { analytics: false, advertising: false }, false), { analytics: false, advertising: false });
   });
   it("keeps advertising and analytics separate", () => {
-    expect(permissions("DE", { analytics: true, advertising: false }, false)).toEqual({ analytics: true, advertising: false });
+    assert.deepEqual(permissions("DE", { analytics: true, advertising: false }, false), { analytics: true, advertising: false });
   });
   it("honors advertising opt-outs even after acceptance", () => {
-    expect(permissions("IN", { analytics: true, advertising: true }, true)).toEqual({ analytics: true, advertising: false });
+    assert.deepEqual(permissions("IN", { analytics: true, advertising: true }, true), { analytics: true, advertising: false });
   });
 });

@@ -9,6 +9,7 @@ type TrackingWindow = Window & {
   dataLayer?: unknown[];
   gtag?: (...args: unknown[]) => void;
   adroll?: { track: (name: string) => void };
+  __adroll_loaded?: boolean;
   adroll_adv_id?: string;
   adroll_pix_id?: string;
   adroll_version?: string;
@@ -34,7 +35,7 @@ function syncTracking(region: string, measurementId: string | null, path: string
     return;
   }
   // This marketing site has no query-driven workflow; don't share URL identifiers.
-  if (location.search || location.hash) history.replaceState(history.state, "", path);
+  if (location.search) history.replaceState(history.state, "", `${path}${location.hash}`);
   w.gtag?.("consent", "update", { analytics_storage: permission.analytics ? "granted" : "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
   if (permission.analytics && measurementId) {
     const page = `${location.origin}${path}`;
@@ -65,11 +66,20 @@ function syncTracking(region: string, measurementId: string | null, path: string
       w.adroll_tag_source = "manual";
       w.adroll_fpconsent = true;
       w.__adroll_consent = true;
+      w.__adroll_loaded = true;
+      // Preserve the provider's documented queue before its asynchronous runtime loads.
+      const queue: unknown[][] & { f?: string[]; track?: (name: string) => void } = [];
+      queue.f = ["setProperties", "identify", "track", "identify_email", "get_cookie"];
+      for (const name of queue.f) {
+        Object.assign(queue, { [name]: function () { queue.push([name, arguments]); } });
+      }
+      w.adroll = queue as typeof queue & { track: (name: string) => void };
+      w.adroll.track("pageView");
       const script = document.createElement("script");
       script.id = "instapark-adroll-tag";
       script.async = true;
       script.src = "https://s.adroll.com/j/QGVVEYYRPNFI3F2O6W43GU/roundtrip.js";
-      // roundtrip reports the initial visit itself; don't report it twice.
+      // The queued pageView reports this visit once.
       adLastPage = path;
       document.head.appendChild(script);
       adInstalled = true;
