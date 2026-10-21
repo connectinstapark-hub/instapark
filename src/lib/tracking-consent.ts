@@ -1,7 +1,7 @@
 export const CONSENT_KEY = "instapark_tracking_consent";
 export const NOTICE_VERSION = "2026-10-21";
 export const CONSENT_NOTICE = "Google Analytics measures page visits and device/browser usage. AdRoll uses page visits, online identifiers and cookies for advertising measurement, personalization and optimization. No names, email addresses or phone numbers are shared by these tags. Essential storage keeps your privacy choices. You may refuse either purpose and change your choice in Cookie settings.";
-const regulated = new Set("AT BE BG HR CY CZ DK EE FI FR DE GR HU IS IE IT LV LI LT LU MT NL NO PL PT RO SK SI ES SE GB CH".split(" "));
+const regulated = new Set("AT BE BG HR CY CZ DK EE FI FR DE GR HU IS IE IT LV LI LT LU MT NL NO PL PT RO SK SI ES SE GB CH BR CA".split(" "));
 export type Choice = { analytics: boolean; advertising: boolean };
 export type ConsentRecord = Choice & { visitor: string; region: string; time: string; noticeVersion: string; notice: string };
 export type ConsentHistory = { visitor: string; records: ConsentRecord[] };
