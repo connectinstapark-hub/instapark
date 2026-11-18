@@ -15,6 +15,7 @@ import { PageLoader } from "@/components/instapark/page-loader";
 import { DefinitionBlock, FaqSection } from "@/components/instapark/faq-section";
 import { FAQS } from "@/content/faqs";
 import { SITE_URL, LOGO_URL, faqSchema, seoHead } from "@/lib/seo";
+import googlePlayBadge from "@/assets/google-play-badge.png.asset.json";
 
 const title = "InstaPark — Valet Management Software for Hotels & Venues";
 const description =
@@ -79,6 +80,11 @@ function Index() {
         <Pricing />
         <FaqSection />
         <DemoCta />
+        <section aria-label="Download InstaPark" className="flex justify-center border-t border-border bg-background px-5 py-8">
+          <a href="https://play.google.com/store/apps/details?id=com.instapark.app" target="_blank" rel="noopener noreferrer" className="inline-flex rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+            <img src={googlePlayBadge.url} alt="Download on the Google Play Store" width={240} height={93} className="h-auto w-60 max-w-full" loading="lazy" />
+          </a>
+        </section>
       </main>
       <SiteFooter />
     </div>

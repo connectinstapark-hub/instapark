@@ -10,5 +10,8 @@
 - [x] Reposition guest pass card so it no longer covers dashboard data
 
 ## Tracking
-- [ ] Add Google Analytics and AdRoll sitewide with regional consent and settings
-- [ ] Update privacy disclosure and verify consent, tag loading and page views
+- [x] Add Google Analytics and AdRoll sitewide with regional consent and settings
+- [x] Update privacy disclosure and verify consent, tag loading and page views (provider receipt unverified; Analytics request failed in sandbox; not published)
+
+## Google Play
+- [x] Add an official-style Google Play badge only above the landing-page footer, linking to com.instapark.app in a new tab
