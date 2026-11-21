@@ -35,7 +35,7 @@ export function Hero() {
         <div>
           <Reveal>
             <Link to="/instaconnect" className="inline-flex max-w-full rounded-lg border border-gold/40 bg-gold/10 px-4 py-3 text-sm leading-relaxed text-brand-foreground transition-colors hover:bg-gold/20">
-              <span><strong className="text-gold">✨ NEW ADD-ON: instaConnect</strong> — Let anyone reach you about your parked vehicle without sharing your phone number. <span className="font-semibold text-gold">Explore →</span></span>
+              <span><strong className="text-gold">✨ NEW ADD-ON: instaConnect</strong> — Let anyone reach you about your parked vehicle without sharing your phone number. <span className="font-semibold text-gold">See How It Works →</span></span>
             </Link>
             <p className="mt-5 text-xs font-semibold uppercase text-gold">Multi-tenant valet platform</p>
           </Reveal>
@@ -66,14 +66,8 @@ export function Hero() {
               >
                 Book a Demo <ArrowRight className="size-4" />
               </a>
-              <a
-                href="#how-it-works"
-                className="corner-cut inline-flex items-center gap-2 border border-brand-foreground/30 px-7 py-3.5 text-sm font-semibold text-brand-foreground transition-colors hover:border-gold hover:text-gold"
-              >
-                See How It Works
-              </a>
+              <Button asChild variant="brandOutline" className="h-auto whitespace-normal px-5 py-3.5"><Link to="/instaconnect">Explore instaConnect QR Tags <ArrowRight /></Link></Button>
             </div>
-            <Button asChild variant="link" className="mt-3 h-auto whitespace-normal px-0 py-2 text-gold"><Link to="/instaconnect">Discover instaConnect QR Tags <ArrowRight className="size-4" /></Link></Button>
           </Reveal>
           <Reveal delay={320}>
             <ul className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-white/10 pt-6">

@@ -17,6 +17,7 @@
 - [x] Add an official-style Google Play badge only above the landing-page footer, linking to com.instapark.app in a new tab
 
 ## instaConnect
+- [x] Update home links and product page to the four-step flow with an interactive phone preview, uploaded QR tag and rollout statuses; verify desktop/mobile preview and inquiry flows
 - [x] Add home announcement and navigation link
 - [x] Build product page with comparison, steps, use cases, bulk offer and FAQ
 - [x] Add validated individual and bulk email-request forms to the confirmed contact email and verify desktop/mobile flows
