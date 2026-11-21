@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Car, Check, PhoneCall, MessageCircle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -11,11 +11,21 @@ export const CONNECT_STEPS = [
 const reasons = ["Wrong parking", "Blocking another car", "Lights are on", "Damage to the vehicle", "Other"];
 
 export function InstaConnectPreview() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [reason, setReason] = useState("Wrong parking");
   const [plate, setPlate] = useState("");
   const [phone, setPhone] = useState("");
-  return <div className="mx-auto w-full max-w-[360px] text-foreground">
+  const pausedRef = useRef(false);
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+    const timer = window.setInterval(() => {
+      if (!pausedRef.current && !document.hidden) setStep((s) => (s + 1) % CONNECT_STEPS.length);
+    }, 3500);
+    return () => window.clearInterval(timer);
+  }, []);
+  const pauseAutoPlay = () => { pausedRef.current = true; };
+  return <div className="mx-auto w-full max-w-[360px] text-foreground" onPointerDown={pauseAutoPlay} onFocusCapture={pauseAutoPlay}>
     <div className="connect-phone overflow-hidden rounded-[2rem] border-[6px] border-brand-deep bg-cream">
       <div className="flex h-9 items-center justify-between bg-brand-deep px-5 text-[10px] font-semibold text-brand-foreground"><span>9:41</span><span className="mx-2 truncate">instaConnect</span><ShieldCheck className="size-3" /></div>
       <div className="h-[500px] overflow-y-auto px-4 pb-5 pt-5">
