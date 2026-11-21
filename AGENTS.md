@@ -15,3 +15,4 @@
 - Keep instaConnect request validation and email preparation in a browser-safe module, shared by its modal and tests; email drafts must not be reported as submitted orders.
 - Use the shared site navigation/footer and design-system controls on the instaConnect product route; this preserves sitewide branding and consent behavior.
 - Keep the interactive instaConnect walkthrough separate from live vehicle connections; marketing previews must never initiate calls or collect contact details remotely.
+- Serve app images from `public/` with plain root paths instead of CDN asset pointers; pointer URLs break outside the Lovable preview.

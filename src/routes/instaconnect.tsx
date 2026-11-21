@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { InstaConnectPreview, CONNECT_STEPS } from "@/components/instapark/instaconnect-preview";
 import { CONNECT_FAQS, type RequestKind } from "@/lib/instaconnect";
-import vehicle from "@/assets/instaconnect-vehicle.jpg.asset.json";
 
 const description = "instaConnect by InstaPark: privacy-first QR tags for cars and bikes. Reach vehicle owners through secure anonymous calls with no app download. Plate verification protects both numbers; WhatsApp and SMS alerts are coming soon.";
 export const Route = createFileRoute("/instaconnect")({
@@ -32,7 +31,7 @@ function InstaConnectPage() {
     <SiteNav solid />
     <main>
       <section className="relative isolate overflow-hidden bg-brand-deep pt-28 text-brand-foreground lg:pt-32">
-        <img src={vehicle.url} alt="instaConnect vehicle QR tag on a car windshield" width={1672} height={941} className="absolute inset-0 h-full w-full object-cover object-center" fetchPriority="high" />
+        <img src="/instaconnect-vehicle.jpg" alt="instaConnect vehicle QR tag on a car windshield" width={1672} height={941} className="absolute inset-0 h-full w-full object-cover object-center" fetchPriority="high" />
         <div aria-hidden className="connect-photo-scrim pointer-events-none absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 pb-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-8 lg:pb-12">
           <div className="max-w-xl">
