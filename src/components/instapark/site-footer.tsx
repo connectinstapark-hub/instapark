@@ -79,7 +79,7 @@ export function SiteFooter() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm text-brand-foreground/65 transition-colors hover:text-brand-foreground"
+                        className="break-words text-sm text-brand-foreground/65 transition-colors hover:text-brand-foreground"
                       >
                         {link.label}
                       </a>

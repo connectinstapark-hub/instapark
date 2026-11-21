@@ -17,6 +17,6 @@
 - [x] Add an official-style Google Play badge only above the landing-page footer, linking to com.instapark.app in a new tab
 
 ## instaConnect
-- [ ] Add home announcement and navigation link
-- [ ] Build product page with comparison, steps, use cases, bulk offer and FAQ
-- [ ] Add validated individual and bulk email-request forms and verify desktop/mobile flows
+- [x] Add home announcement and navigation link
+- [x] Build product page with comparison, steps, use cases, bulk offer and FAQ
+- [x] Add validated individual and bulk email-request forms to the confirmed contact email and verify desktop/mobile flows
