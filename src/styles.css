@@ -194,6 +194,10 @@
   background-image: linear-gradient(150deg, oklch(0.288 0.163 306.5), oklch(0.17 0.1 300));
 }
 
+@utility connect-photo-scrim {
+  background-image: linear-gradient(90deg, var(--brand-deep) 0%, color-mix(in oklch, var(--brand-deep) 95%, transparent) 28%, color-mix(in oklch, var(--brand-deep) 72%, transparent) 39%, transparent 60%);
+}
+
 @utility reveal {
   opacity: 0;
   transform: translateY(1.5rem);

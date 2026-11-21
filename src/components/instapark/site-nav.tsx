@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 
@@ -11,7 +13,7 @@ const links = [
   { label: "Contact", href: "/#contact" },
 ];
 
-export function SiteNav() {
+export function SiteNav({ solid = false }: { solid?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -26,7 +28,7 @@ export function SiteNav() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || solid
           ? "border-b border-white/10 bg-brand/95 backdrop-blur-md"
           : "bg-transparent",
       )}
@@ -39,7 +41,8 @@ export function SiteNav() {
           <Logo tone="light" />
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-5 xl:flex">
+          <Link to="/instaconnect" className="flex items-center gap-1.5 text-sm font-medium text-brand-foreground hover:text-gold">instaConnect <span className="rounded-full bg-gold px-1.5 py-0.5 text-[9px] font-bold text-gold-foreground">NEW</span></Link>
           {links.map((link) => (
             <a
               key={link.href}
@@ -57,20 +60,21 @@ export function SiteNav() {
           </a>
         </div>
 
-        <button
+        <Button variant="ghost" size="icon"
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="text-brand-foreground lg:hidden"
+          className="text-brand-foreground xl:hidden"
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
-        </button>
+        </Button>
       </nav>
 
       {open ? (
-        <div className="border-t border-white/10 bg-brand-deep px-5 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-brand-foreground/10 bg-brand-deep px-5 pb-6 pt-2 xl:hidden">
           <ul className="flex flex-col">
+            <li><Link to="/instaconnect" onClick={() => setOpen(false)} className="flex items-center gap-2 border-b border-brand-foreground/5 py-3 text-sm font-medium text-brand-foreground">instaConnect <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-bold text-gold-foreground">NEW</span></Link></li>
             {links.map((link) => (
               <li key={link.href}>
                 <a

@@ -10,6 +10,8 @@ import {
 
 import { Logo } from "./logo";
 import { Reveal } from "./reveal";
+import { Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 
 const tags = ["Hotels", "Event Grounds", "Commercial Venues", "Hotel Chains"];
 
@@ -32,9 +34,10 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div>
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-gold">
-              Multi-tenant valet platform
-            </span>
+            <Link to="/instaconnect" className="inline-flex max-w-full rounded-lg border border-gold/40 bg-gold/10 px-4 py-3 text-sm leading-relaxed text-brand-foreground transition-colors hover:bg-gold/20">
+              <span><strong className="text-gold">✨ NEW ADD-ON: instaConnect</strong> — Let anyone reach you about your parked vehicle without sharing your phone number. <span className="font-semibold text-gold">Explore →</span></span>
+            </Link>
+            <p className="mt-5 text-xs font-semibold uppercase text-gold">Multi-tenant valet platform</p>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-6 text-4xl font-bold leading-[1.08] text-brand-foreground sm:text-5xl lg:text-6xl">
@@ -70,6 +73,7 @@ export function Hero() {
                 See How It Works
               </a>
             </div>
+            <Button asChild variant="link" className="mt-3 h-auto whitespace-normal px-0 py-2 text-gold"><Link to="/instaconnect">Discover instaConnect QR Tags <ArrowRight className="size-4" /></Link></Button>
           </Reveal>
           <Reveal delay={320}>
             <ul className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-white/10 pt-6">

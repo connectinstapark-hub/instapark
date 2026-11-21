@@ -12,3 +12,5 @@
 - Keep sitewide tracking in the shared root with one consent controller; this prevents duplicate provider installs across content pages.
 - The tracking configuration server function exposes only the validated public GA measurement ID; no API credentials may be returned.
 - Keep versioned visitor consent history in first-party browser storage, preserving acceptance on withdrawal; tags must read current purpose-specific permission before sending.
+- Keep instaConnect request validation and email preparation in a browser-safe module, shared by its modal and tests; email drafts must not be reported as submitted orders.
+- Use the shared site navigation/footer and design-system controls on the instaConnect product route; this preserves sitewide branding and consent behavior.
