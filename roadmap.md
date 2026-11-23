@@ -16,7 +16,8 @@
 ## Google Play
 - [x] Add an official-style Google Play badge only above the landing-page footer, linking to com.instapark.app in a new tab
 
-## instaConnect
+## instaKonnect
+- [x] Rebrand to instaKonnect at /instakonnect (old URL redirects), new everyday-uses, family pack, tabbed order modal with city
 - [x] Update home links and product page to the four-step flow with an interactive phone preview, uploaded QR tag and rollout statuses; verify desktop/mobile preview and inquiry flows
 - [x] Add home announcement and navigation link
 - [x] Build product page with comparison, steps, use cases, bulk offer and FAQ

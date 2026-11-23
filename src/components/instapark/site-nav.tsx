@@ -42,7 +42,7 @@ export function SiteNav({ solid = false }: { solid?: boolean }) {
         </a>
 
         <div className="hidden items-center gap-5 xl:flex">
-          <Link to="/instaconnect" className="flex items-center gap-1.5 text-sm font-medium text-brand-foreground hover:text-gold">instaConnect <span className="rounded-full bg-gold px-1.5 py-0.5 text-[9px] font-bold text-gold-foreground">NEW</span></Link>
+          <Link to="/instakonnect" className="flex items-center gap-1.5 text-sm font-medium text-brand-foreground hover:text-gold">instaKonnect <span className="rounded-full bg-gold px-1.5 py-0.5 text-[9px] font-bold text-gold-foreground">NEW</span></Link>
           {links.map((link) => (
             <a
               key={link.href}
@@ -74,7 +74,7 @@ export function SiteNav({ solid = false }: { solid?: boolean }) {
       {open ? (
         <div className="border-t border-brand-foreground/10 bg-brand-deep px-5 pb-6 pt-2 xl:hidden">
           <ul className="flex flex-col">
-            <li><Link to="/instaconnect" onClick={() => setOpen(false)} className="flex items-center gap-2 border-b border-brand-foreground/5 py-3 text-sm font-medium text-brand-foreground">instaConnect <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-bold text-gold-foreground">NEW</span></Link></li>
+            <li><Link to="/instakonnect" onClick={() => setOpen(false)} className="flex items-center gap-2 border-b border-brand-foreground/5 py-3 text-sm font-medium text-brand-foreground">instaKonnect <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-bold text-gold-foreground">NEW</span></Link></li>
             {links.map((link) => (
               <li key={link.href}>
                 <a

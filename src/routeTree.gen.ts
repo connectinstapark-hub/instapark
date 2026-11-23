@@ -17,6 +17,7 @@ import { Route as HospitalAndMallValetRouteImport } from './routes/hospital-and-
 import { Route as HotelValetSoftwareRouteImport } from './routes/hotel-valet-software'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as InstaconnectRouteImport } from './routes/instaconnect'
+import { Route as InstakonnectRouteImport } from './routes/instakonnect'
 import { Route as PressRouteImport } from './routes/press'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as QrKeyManagementRouteImport } from './routes/qr-key-management'
@@ -64,6 +65,11 @@ const HowItWorksRoute = HowItWorksRouteImport.update({
 const InstaconnectRoute = InstaconnectRouteImport.update({
   id: '/instaconnect',
   path: '/instaconnect',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstakonnectRoute = InstakonnectRouteImport.update({
+  id: '/instakonnect',
+  path: '/instakonnect',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PressRoute = PressRouteImport.update({
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/hotel-valet-software': typeof HotelValetSoftwareRoute
   '/how-it-works': typeof HowItWorksRoute
   '/instaconnect': typeof InstaconnectRoute
+  '/instakonnect': typeof InstakonnectRoute
   '/press': typeof PressRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/qr-key-management': typeof QrKeyManagementRoute
@@ -134,6 +141,7 @@ export interface FileRoutesByTo {
   '/hotel-valet-software': typeof HotelValetSoftwareRoute
   '/how-it-works': typeof HowItWorksRoute
   '/instaconnect': typeof InstaconnectRoute
+  '/instakonnect': typeof InstakonnectRoute
   '/press': typeof PressRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/qr-key-management': typeof QrKeyManagementRoute
@@ -153,6 +161,7 @@ export interface FileRoutesById {
   '/hotel-valet-software': typeof HotelValetSoftwareRoute
   '/how-it-works': typeof HowItWorksRoute
   '/instaconnect': typeof InstaconnectRoute
+  '/instakonnect': typeof InstakonnectRoute
   '/press': typeof PressRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/qr-key-management': typeof QrKeyManagementRoute
@@ -173,6 +182,7 @@ export interface FileRouteTypes {
     | '/hotel-valet-software'
     | '/how-it-works'
     | '/instaconnect'
+    | '/instakonnect'
     | '/press'
     | '/privacy-policy'
     | '/qr-key-management'
@@ -191,6 +201,7 @@ export interface FileRouteTypes {
     | '/hotel-valet-software'
     | '/how-it-works'
     | '/instaconnect'
+    | '/instakonnect'
     | '/press'
     | '/privacy-policy'
     | '/qr-key-management'
@@ -209,6 +220,7 @@ export interface FileRouteTypes {
     | '/hotel-valet-software'
     | '/how-it-works'
     | '/instaconnect'
+    | '/instakonnect'
     | '/press'
     | '/privacy-policy'
     | '/qr-key-management'
@@ -228,6 +240,7 @@ export interface RootRouteChildren {
   HotelValetSoftwareRoute: typeof HotelValetSoftwareRoute
   HowItWorksRoute: typeof HowItWorksRoute
   InstaconnectRoute: typeof InstaconnectRoute
+  InstakonnectRoute: typeof InstakonnectRoute
   PressRoute: typeof PressRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   QrKeyManagementRoute: typeof QrKeyManagementRoute
@@ -294,6 +307,13 @@ declare module '@tanstack/react-router' {
       path: '/instaconnect'
       fullPath: '/instaconnect'
       preLoaderRoute: typeof InstaconnectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instakonnect': {
+      id: '/instakonnect'
+      path: '/instakonnect'
+      fullPath: '/instakonnect'
+      preLoaderRoute: typeof InstakonnectRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/press': {
@@ -364,6 +384,7 @@ const rootRouteChildren: RootRouteChildren = {
   HotelValetSoftwareRoute: HotelValetSoftwareRoute,
   HowItWorksRoute: HowItWorksRoute,
   InstaconnectRoute: InstaconnectRoute,
+  InstakonnectRoute: InstakonnectRoute,
   PressRoute: PressRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   QrKeyManagementRoute: QrKeyManagementRoute,

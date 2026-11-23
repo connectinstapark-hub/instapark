@@ -34,8 +34,8 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div>
           <Reveal>
-            <Link to="/instaconnect" className="inline-flex max-w-full rounded-lg border border-gold/40 bg-gold/10 px-4 py-3 text-sm leading-relaxed text-brand-foreground transition-colors hover:bg-gold/20">
-              <span><strong className="text-gold">✨ NEW ADD-ON: instaConnect</strong> — Let anyone reach you about your parked vehicle without sharing your phone number. <span className="font-semibold text-gold">See How It Works →</span></span>
+            <Link to="/instakonnect" className="inline-flex max-w-full rounded-lg border border-gold/40 bg-gold/10 px-4 py-3 text-sm leading-relaxed text-brand-foreground transition-colors hover:bg-gold/20">
+              <span><strong className="text-gold">✨ NEW ADD-ON: instaKonnect</strong> — Let anyone reach you about your vehicle, EV, or belongings without sharing your phone number. <span className="font-semibold text-gold">Explore →</span></span>
             </Link>
             <p className="mt-5 text-xs font-semibold uppercase text-gold">Multi-tenant valet platform</p>
           </Reveal>
@@ -66,7 +66,7 @@ export function Hero() {
               >
                 Book a Demo <ArrowRight className="size-4" />
               </a>
-              <Button asChild variant="brandOutline" className="h-auto whitespace-normal px-5 py-3.5"><Link to="/instaconnect">Explore instaConnect QR Tags <ArrowRight /></Link></Button>
+              <Button asChild variant="brandOutline" className="h-auto whitespace-normal px-5 py-3.5"><Link to="/instakonnect">Explore instaKonnect <ArrowRight /></Link></Button>
             </div>
           </Reveal>
           <Reveal delay={320}>
