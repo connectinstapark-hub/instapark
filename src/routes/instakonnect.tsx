@@ -33,7 +33,7 @@ function InstaConnectPage() {
     <SiteNav solid />
     <main>
       <section className="relative isolate overflow-hidden bg-brand-deep pt-28 text-brand-foreground lg:pt-32">
-        <Parallax speed={0.35} className="absolute inset-x-0 -top-24 -bottom-24 -z-10"><img src="/instaconnect-vehicle.jpg" alt="instaKonnect vehicle QR tag on a car windshield" width={1672} height={941} className="h-full w-full object-cover object-center" fetchPriority="high" /></Parallax>
+        <Parallax speed={0.35} className="absolute inset-x-0 -top-24 -bottom-24 -z-10"><img src="/instakonnect-vehicle.jpg" alt="instaKonnect vehicle QR tag on a car windshield" width={1672} height={941} className="h-full w-full object-cover object-center" fetchPriority="high" /></Parallax>
         <div aria-hidden className="connect-photo-scrim pointer-events-none absolute inset-0 -z-10" />
         <div aria-hidden className="grid-lines pointer-events-none absolute inset-0 -z-10" />
         <Parallax speed={-0.15} className="pointer-events-none absolute -left-20 top-20 -z-10"><div className="glow-orb size-80 bg-gold/25" /></Parallax>
