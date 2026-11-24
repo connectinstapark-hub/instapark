@@ -225,3 +225,39 @@
 
 .connect-phone { box-shadow: 0 24px 60px color-mix(in oklch, var(--brand-deep) 35%, transparent); letter-spacing: 0; }
 .connect-phone h3 { letter-spacing: 0; }
+
+@utility glow-orb {
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+}
+@utility grid-lines {
+  background-image: linear-gradient(color-mix(in oklch, var(--brand-foreground) 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklch, var(--brand-foreground) 7%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+@utility glass-card {
+  background: color-mix(in oklch, var(--brand-foreground) 6%, transparent);
+  border: 1px solid color-mix(in oklch, var(--brand-foreground) 14%, transparent);
+  backdrop-filter: blur(14px);
+}
+@utility gold-text {
+  background: linear-gradient(100deg, var(--gold), color-mix(in oklch, var(--gold) 60%, var(--brand-foreground)), var(--gold));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shine 6s linear infinite;
+}
+@utility lift-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  &:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 24px 50px -20px color-mix(in oklch, var(--brand) 45%, transparent);
+  }
+}
+@keyframes gold-shine { to { background-position: 200% center; } }
+@keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+.float-slow { animation: float-y 7s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .gold-text, .float-slow { animation: none; } }
