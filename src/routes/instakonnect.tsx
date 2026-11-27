@@ -9,6 +9,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { InstaConnectPreview, CONNECT_STEPS } from "@/components/instapark/instaconnect-preview";
 import { Parallax } from "@/components/instapark/parallax";
 import { Reveal } from "@/components/instapark/reveal";
+import { RealWorldProblem } from "@/components/instapark/real-world-problem";
 import { UtilityBento } from "@/components/instapark/utility-bento";
 import { CONNECT_FAQS, type RequestKind } from "@/lib/instaconnect";
 
@@ -55,7 +56,8 @@ function InstaConnectPage() {
           <Parallax speed={-0.08}><div className="float-slow"><InstaConnectPreview /></div></Parallax>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-cream px-5 py-20 lg:px-8">
+      <RealWorldProblem stepsId="how-it-works" />
+      <section id="how-it-works" className="relative overflow-hidden bg-cream px-5 py-20 lg:px-8">
         <Parallax speed={0.2} className="pointer-events-none absolute -right-24 top-0"><div className="glow-orb size-80 bg-gold/30" /></Parallax>
         <div className="relative mx-auto max-w-6xl"><Reveal><p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">From a scan to a private connection</p><h2 className="mt-3 text-3xl font-bold sm:text-4xl">Four steps. Both numbers protected.</h2></Reveal>
           <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{CONNECT_STEPS.map((step, index) => <Reveal as="li" delay={index * 120} key={step.title} className="lift-card relative overflow-hidden rounded-2xl border border-border bg-card p-6"><span aria-hidden className="absolute -right-2 -top-6 font-display text-8xl font-bold text-primary/10">{index + 1}</span><span className="flex size-11 items-center justify-center rounded-xl bg-brand font-display text-lg font-bold text-gold">0{index + 1}</span><h3 className="mt-5 text-lg font-semibold">{step.title}{index === 0 ? <span className="mt-2 block text-xs font-semibold text-primary">No App Needed</span> : null}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{step.text}</p>{index === 2 ? <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Standard: GJ01AB 1234 → 1234<br />BH: 22 BH 1234 AA → 1234<br />Short plates: 7 or 0007</p> : null}</Reveal>)}</ol>

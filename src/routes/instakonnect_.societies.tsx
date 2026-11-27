@@ -4,6 +4,7 @@ import { SiteNav } from "@/components/instapark/site-nav";
 import { SiteFooter } from "@/components/instapark/site-footer";
 import { Reveal } from "@/components/instapark/reveal";
 import { Parallax } from "@/components/instapark/parallax";
+import { RealWorldProblem } from "@/components/instapark/real-world-problem";
 import { VerticalHero, SectionHead, LeadForm, scrollToForm, verticalHead } from "@/components/instapark/instakonnect-vertical";
 
 export const Route = createFileRoute("/instakonnect_/societies")({
@@ -49,7 +50,8 @@ function SocietiesPage() {
           <Reveal className="mx-auto w-full max-w-xs"><div className="rotate-2 rounded-3xl bg-brand-deep p-5 shadow-2xl ring-1 ring-gold/40"><div className="rounded-xl bg-emerald/15 px-3 py-2 text-center text-xs font-bold tracking-widest text-emerald">LAKEVIEW RESIDENCY</div><p className="mt-3 text-center text-xs text-brand-foreground/70">× instaKonnect</p><img src="/instaconnect-tag.png" alt="Sample co-branded instaKonnect society decal" className="mt-3 w-full rounded-xl" loading="lazy" /></div></Reveal>
         </div>
       </section>
-      <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-6xl">
+      <RealWorldProblem stepsId="society-rollout" />
+      <section id="society-rollout" className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-6xl">
         <SectionHead eyebrow="3-step rollout" title="Live in your society within a week." className="text-brand" />
         <ol className="mt-10 grid gap-5 md:grid-cols-3">{steps.map((s, i) => <Reveal as="li" key={s.t} delay={i * 120} className="relative rounded-2xl border border-border bg-card p-7"><span className="font-display text-5xl font-bold text-emerald/30">0{i + 1}</span><s.icon className="mt-2 size-7 text-brand" /><h3 className="mt-4 text-lg font-semibold">{s.t}</h3><p className="mt-2 text-sm text-muted-foreground">{s.d}</p></Reveal>)}</ol>
         <LeadForm id="society-pilot" className="mt-14" subject="instaKonnect — 50-tag society pilot application" fields={fields} title="Apply for the 50-Tag Society Pilot" note="Tell us about your community. Our team will confirm pricing and delivery." />
