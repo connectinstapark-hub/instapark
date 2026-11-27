@@ -9,6 +9,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { InstaConnectPreview, CONNECT_STEPS } from "@/components/instapark/instaconnect-preview";
 import { Parallax } from "@/components/instapark/parallax";
 import { Reveal } from "@/components/instapark/reveal";
+import { UtilityBento } from "@/components/instapark/utility-bento";
 import { CONNECT_FAQS, type RequestKind } from "@/lib/instaconnect";
 
 const description = "instaKonnect by InstaPark: privacy-first QR contact tags for cars, bikes, EVs and belongings. Reach owners through secure anonymous calls with no app download. Plate verification protects both numbers; WhatsApp and SMS alerts are coming soon.";
@@ -60,6 +61,7 @@ function InstaConnectPage() {
           <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{CONNECT_STEPS.map((step, index) => <Reveal as="li" delay={index * 120} key={step.title} className="lift-card relative overflow-hidden rounded-2xl border border-border bg-card p-6"><span aria-hidden className="absolute -right-2 -top-6 font-display text-8xl font-bold text-primary/10">{index + 1}</span><span className="flex size-11 items-center justify-center rounded-xl bg-brand font-display text-lg font-bold text-gold">0{index + 1}</span><h3 className="mt-5 text-lg font-semibold">{step.title}{index === 0 ? <span className="mt-2 block text-xs font-semibold text-primary">No App Needed</span> : null}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{step.text}</p>{index === 2 ? <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Standard: GJ01AB 1234 → 1234<br />BH: 22 BH 1234 AA → 1234<br />Short plates: 7 or 0007</p> : null}</Reveal>)}</ol>
         </div>
       </section>
+      <UtilityBento />
       <section className="relative overflow-hidden bg-brand-deep px-5 py-20 text-brand-foreground lg:px-8">
         <div aria-hidden className="grid-lines pointer-events-none absolute inset-0" />
         <Parallax speed={-0.2} className="pointer-events-none absolute left-1/3 top-10"><div className="glow-orb size-96 bg-brand" /></Parallax>

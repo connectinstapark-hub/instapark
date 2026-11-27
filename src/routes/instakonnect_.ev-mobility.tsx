@@ -4,6 +4,7 @@ import { SiteNav } from "@/components/instapark/site-nav";
 import { SiteFooter } from "@/components/instapark/site-footer";
 import { Reveal } from "@/components/instapark/reveal";
 import { Parallax } from "@/components/instapark/parallax";
+import { UtilityBento } from "@/components/instapark/utility-bento";
 import { Button } from "@/components/ui/button";
 import { VerticalHero, SectionHead, LeadForm, scrollToForm, verticalHead } from "@/components/instapark/instakonnect-vertical";
 
@@ -44,6 +45,7 @@ function EvPage() {
           </Reveal>
         </div>
       </section>
+      <div className="text-foreground"><UtilityBento /></div>
       <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-6xl">
         <SectionHead eyebrow="Built-in safety" title="More than a parking tag." className="text-gold" />
         <div className="mt-10 grid gap-5 md:grid-cols-3">{safety.map((s, i) => <Reveal key={s.t} delay={i * 120} className="lift-card rounded-2xl border border-cyan/20 bg-brand-foreground/5 p-7"><s.icon className="size-8 text-cyan" /><h3 className="mt-5 text-lg font-semibold">{s.t}</h3><p className="mt-2 text-sm text-brand-foreground/70">{s.d}</p></Reveal>)}</div>

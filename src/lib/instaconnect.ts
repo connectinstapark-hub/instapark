@@ -28,6 +28,8 @@ export const CONNECT_FAQS = [
   { q: "Is my number visible to the caller — or theirs to me?", a: "Never. Calls are routed through privacy-masked numbers, so neither the scanner nor the owner sees the other’s real phone number." },
   { q: "Why does it ask for the last 4 digits of the plate?", a: "This quick anti-spam check confirms the scanner is next to the right vehicle. Enter 1234 for GJ01AB 1234 or 22 BH 1234 AA. For a short number such as 7, enter 7 or 0007." },
   { q: "When will WhatsApp and SMS alerts be available?", a: "Secure anonymous voice calling is live now. WhatsApp and SMS alerts are rolling out soon on the same contact screen." },
+  { q: "What happens if I am in a meeting and miss a masked call?", a: "With Family Escalation enabled, if you don’t pick up within 15 seconds, instaKonnect automatically forwards the masked call to your secondary number (spouse, family member, or chauffeur)." },
+  { q: "Can I turn off notifications when my car is parked at home?", a: "Yes! Use the one-tap Do Not Disturb or Valet Mode toggle in your tag dashboard anytime." },
 ];
 
 export type LeadField = { key: string; label: string; type: "text" | "tel" | "number" | "email"; autoComplete: string };
