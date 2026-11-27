@@ -21,4 +21,5 @@
 - [x] Update home links and product page to the four-step flow with an interactive phone preview, uploaded QR tag and rollout statuses; verify desktop/mobile preview and inquiry flows
 - [x] Add home announcement and navigation link
 - [x] Build product page with comparison, steps, use cases, bulk offer and FAQ
+- [x] Split instaKonnect into a hub plus Societies, EV Mobility, Personal and Valet & Events pages with menu dropdown and photos
 - [x] Add validated individual and bulk email-request forms to the confirmed contact email and verify desktop/mobile flows

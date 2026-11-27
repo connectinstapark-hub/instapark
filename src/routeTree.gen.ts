@@ -26,6 +26,10 @@ import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-condi
 import { Route as ValetManagementSoftwareRouteImport } from './routes/valet-management-software'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as InstakonnectEvMobilityRouteImport } from './routes/instakonnect_.ev-mobility'
+import { Route as InstakonnectPersonalRouteImport } from './routes/instakonnect_.personal'
+import { Route as InstakonnectSocietiesRouteImport } from './routes/instakonnect_.societies'
+import { Route as InstakonnectValetEventsRouteImport } from './routes/instakonnect_.valet-events'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -112,6 +116,26 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InstakonnectEvMobilityRoute = InstakonnectEvMobilityRouteImport.update({
+  id: '/instakonnect_/ev-mobility',
+  path: '/instakonnect/ev-mobility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstakonnectPersonalRoute = InstakonnectPersonalRouteImport.update({
+  id: '/instakonnect_/personal',
+  path: '/instakonnect/personal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstakonnectSocietiesRoute = InstakonnectSocietiesRouteImport.update({
+  id: '/instakonnect_/societies',
+  path: '/instakonnect/societies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstakonnectValetEventsRoute = InstakonnectValetEventsRouteImport.update({
+  id: '/instakonnect_/valet-events',
+  path: '/instakonnect/valet-events',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -130,6 +154,10 @@ export interface FileRoutesByFullPath {
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/valet-management-software': typeof ValetManagementSoftwareRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/instakonnect/ev-mobility': typeof InstakonnectEvMobilityRoute
+  '/instakonnect/personal': typeof InstakonnectPersonalRoute
+  '/instakonnect/societies': typeof InstakonnectSocietiesRoute
+  '/instakonnect/valet-events': typeof InstakonnectValetEventsRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
@@ -149,6 +177,10 @@ export interface FileRoutesByTo {
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/valet-management-software': typeof ValetManagementSoftwareRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/instakonnect/ev-mobility': typeof InstakonnectEvMobilityRoute
+  '/instakonnect/personal': typeof InstakonnectPersonalRoute
+  '/instakonnect/societies': typeof InstakonnectSocietiesRoute
+  '/instakonnect/valet-events': typeof InstakonnectValetEventsRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
@@ -169,6 +201,10 @@ export interface FileRoutesById {
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/valet-management-software': typeof ValetManagementSoftwareRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/instakonnect_/ev-mobility': typeof InstakonnectEvMobilityRoute
+  '/instakonnect_/personal': typeof InstakonnectPersonalRoute
+  '/instakonnect_/societies': typeof InstakonnectSocietiesRoute
+  '/instakonnect_/valet-events': typeof InstakonnectValetEventsRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -190,6 +226,10 @@ export interface FileRouteTypes {
     | '/terms-and-conditions'
     | '/valet-management-software'
     | '/blog/$slug'
+    | '/instakonnect/ev-mobility'
+    | '/instakonnect/personal'
+    | '/instakonnect/societies'
+    | '/instakonnect/valet-events'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -209,6 +249,10 @@ export interface FileRouteTypes {
     | '/terms-and-conditions'
     | '/valet-management-software'
     | '/blog/$slug'
+    | '/instakonnect/ev-mobility'
+    | '/instakonnect/personal'
+    | '/instakonnect/societies'
+    | '/instakonnect/valet-events'
     | '/blog'
   id:
     | '__root__'
@@ -228,6 +272,10 @@ export interface FileRouteTypes {
     | '/terms-and-conditions'
     | '/valet-management-software'
     | '/blog/$slug'
+    | '/instakonnect_/ev-mobility'
+    | '/instakonnect_/personal'
+    | '/instakonnect_/societies'
+    | '/instakonnect_/valet-events'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -248,6 +296,10 @@ export interface RootRouteChildren {
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   ValetManagementSoftwareRoute: typeof ValetManagementSoftwareRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  InstakonnectEvMobilityRoute: typeof InstakonnectEvMobilityRoute
+  InstakonnectPersonalRoute: typeof InstakonnectPersonalRoute
+  InstakonnectSocietiesRoute: typeof InstakonnectSocietiesRoute
+  InstakonnectValetEventsRoute: typeof InstakonnectValetEventsRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -372,6 +424,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/instakonnect_/ev-mobility': {
+      id: '/instakonnect_/ev-mobility'
+      path: '/instakonnect/ev-mobility'
+      fullPath: '/instakonnect/ev-mobility'
+      preLoaderRoute: typeof InstakonnectEvMobilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instakonnect_/personal': {
+      id: '/instakonnect_/personal'
+      path: '/instakonnect/personal'
+      fullPath: '/instakonnect/personal'
+      preLoaderRoute: typeof InstakonnectPersonalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instakonnect_/societies': {
+      id: '/instakonnect_/societies'
+      path: '/instakonnect/societies'
+      fullPath: '/instakonnect/societies'
+      preLoaderRoute: typeof InstakonnectSocietiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instakonnect_/valet-events': {
+      id: '/instakonnect_/valet-events'
+      path: '/instakonnect/valet-events'
+      fullPath: '/instakonnect/valet-events'
+      preLoaderRoute: typeof InstakonnectValetEventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -392,6 +472,10 @@ const rootRouteChildren: RootRouteChildren = {
   TermsAndConditionsRoute: TermsAndConditionsRoute,
   ValetManagementSoftwareRoute: ValetManagementSoftwareRoute,
   BlogSlugRoute: BlogSlugRoute,
+  InstakonnectEvMobilityRoute: InstakonnectEvMobilityRoute,
+  InstakonnectPersonalRoute: InstakonnectPersonalRoute,
+  InstakonnectSocietiesRoute: InstakonnectSocietiesRoute,
+  InstakonnectValetEventsRoute: InstakonnectValetEventsRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport

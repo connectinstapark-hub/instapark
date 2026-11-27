@@ -29,3 +29,19 @@ export const CONNECT_FAQS = [
   { q: "Why does it ask for the last 4 digits of the plate?", a: "This quick anti-spam check confirms the scanner is next to the right vehicle. Enter 1234 for GJ01AB 1234 or 22 BH 1234 AA. For a short number such as 7, enter 7 or 0007." },
   { q: "When will WhatsApp and SMS alerts be available?", a: "Secure anonymous voice calling is live now. WhatsApp and SMS alerts are rolling out soon on the same contact screen." },
 ];
+
+export type LeadField = { key: string; label: string; type: "text" | "tel" | "number" | "email"; autoComplete: string };
+export function validateLead(fields: readonly LeadField[], values: Record<string, string>): Record<string, string> {
+  const errors: Record<string, string> = {};
+  for (const f of fields) {
+    const v = (values[f.key] ?? "").trim();
+    if (!v) { errors[f.key] = `Please enter ${f.label.toLowerCase()}.`; continue; }
+    if (f.type === "tel" && !/^\+?[1-9]\d{7,14}$/.test(v.replace(/[\s().-]/g, ""))) errors[f.key] = "Please enter a valid phone number, including country code.";
+    if (f.type === "number" && (!/^\d+$/.test(v) || Number(v) < 1)) errors[f.key] = "Please enter a whole number greater than zero.";
+  }
+  return errors;
+}
+export function leadEmail(subject: string, fields: readonly LeadField[], values: Record<string, string>) {
+  const body = [subject, "", ...fields.map((f) => `${f.label}: ${(values[f.key] ?? "").trim()}`), "", "Please share pricing, availability and next steps."].join("\n");
+  return `mailto:connect.instapark@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}

@@ -27,3 +27,10 @@ describe("instaKonnect requests", () => {
     assert.ok(decodeURIComponent(connectRequestEmail(valid, "individual")).includes("individual / family pack order request"));
   });
 });
+import { validateLead, leadEmail, type LeadField } from "./instaconnect";
+describe("instaKonnect vertical lead forms", () => {
+  const fields: LeadField[] = [{ key: "name", label: "Contact Person", type: "text", autoComplete: "name" }, { key: "phone", label: "Phone", type: "tel", autoComplete: "tel" }, { key: "flats", label: "Total Flats", type: "number", autoComplete: "off" }];
+  test("flags every empty field", () => { assert.deepEqual(Object.keys(validateLead(fields, {})).sort(), ["flats", "name", "phone"]); });
+  test("rejects a bad phone and zero quantity", () => { assert.deepEqual(Object.keys(validateLead(fields, { name: "A", phone: "12", flats: "0" })).sort(), ["flats", "phone"]); });
+  test("emails the contact address", () => { assert.ok(leadEmail("Pilot", fields, { name: "A", phone: "+917990317623", flats: "50" }).startsWith("mailto:connect.instapark@gmail.com?subject=Pilot")); });
+});

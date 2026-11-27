@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
+
+const konnect = [
+  { label: "Overview", to: "/instakonnect" },
+  { label: "Residential Societies & Offices", to: "/instakonnect/societies" },
+  { label: "Vehicles & EV Mobility", to: "/instakonnect/ev-mobility" },
+  { label: "Personal Belongings & Family", to: "/instakonnect/personal" },
+  { label: "Valet & Events Synergy", to: "/instakonnect/valet-events" },
+] as const;
 
 const links = [
   { label: "Platform", href: "/#platform" },
@@ -42,7 +50,12 @@ export function SiteNav({ solid = false }: { solid?: boolean }) {
         </a>
 
         <div className="hidden items-center gap-5 xl:flex">
-          <Link to="/instakonnect" className="flex items-center gap-1.5 text-sm font-medium text-brand-foreground hover:text-gold">instaKonnect <span className="rounded-full bg-gold px-1.5 py-0.5 text-[9px] font-bold text-gold-foreground">NEW</span></Link>
+          <div className="group relative">
+            <Link to="/instakonnect" aria-haspopup="true" className="flex items-center gap-1.5 text-sm font-medium text-brand-foreground hover:text-gold">instaKonnect <span className="rounded-full bg-gold px-1.5 py-0.5 text-[9px] font-bold text-gold-foreground">NEW</span><ChevronDown className="size-4 transition-transform group-hover:rotate-180" /></Link>
+            <div className="invisible absolute left-0 top-full pt-3 opacity-0 transition-all group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+              <ul className="w-72 rounded-xl border border-brand-foreground/10 bg-brand-deep p-2 shadow-2xl">{konnect.map((k) => <li key={k.to}><Link to={k.to} activeOptions={{ exact: true }} activeProps={{ className: "text-gold" }} className="block rounded-lg px-3 py-2.5 text-sm text-brand-foreground/85 hover:bg-brand hover:text-gold">{k.label}</Link></li>)}</ul>
+            </div>
+          </div>
           {links.map((link) => (
             <a
               key={link.href}
@@ -74,7 +87,7 @@ export function SiteNav({ solid = false }: { solid?: boolean }) {
       {open ? (
         <div className="border-t border-brand-foreground/10 bg-brand-deep px-5 pb-6 pt-2 xl:hidden">
           <ul className="flex flex-col">
-            <li><Link to="/instakonnect" onClick={() => setOpen(false)} className="flex items-center gap-2 border-b border-brand-foreground/5 py-3 text-sm font-medium text-brand-foreground">instaKonnect <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-bold text-gold-foreground">NEW</span></Link></li>
+            <li className="border-b border-brand-foreground/5 py-3"><p className="flex items-center gap-2 text-sm font-medium text-brand-foreground">instaKonnect <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-bold text-gold-foreground">NEW</span></p><ul className="mt-2 border-l border-gold/40 pl-3">{konnect.map((k) => <li key={k.to}><Link to={k.to} onClick={() => setOpen(false)} className="block py-2 text-sm text-brand-foreground/80">{k.label}</Link></li>)}</ul></li>
             {links.map((link) => (
               <li key={link.href}>
                 <a
