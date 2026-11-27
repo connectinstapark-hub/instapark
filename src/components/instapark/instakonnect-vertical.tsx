@@ -24,7 +24,7 @@ export function VerticalHero({ img, alt, badge, title, sub, cta, onCta, classNam
 }
 
 export function SectionHead({ eyebrow, title, className }: { eyebrow: string; title: string; className?: string }) {
-  return <Reveal className={className}><p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-80">{eyebrow}</p><h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">{title}</h2></Reveal>;
+  return <Reveal className={className ?? ""}><p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-80">{eyebrow}</p><h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">{title}</h2></Reveal>;
 }
 
 export function LeadForm({ id, subject, fields, title, note, className }: { id: string; subject: string; fields: readonly LeadField[]; title: string; note: string; className?: string }) {
